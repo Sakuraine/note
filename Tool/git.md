@@ -96,15 +96,15 @@ git checkout -b <dev>
 ```
 
 2. 先创建分支再切换到该分支
-    1. 创建新的分支
-    ```
-    git branch <dev>
-    ```
+  1. 创建新的分支
+  ```
+  git branch <dev>
+  ```
 
-    2. 切换到该分支
-    ```
-    git checkout <dev>
-    ```
+  2. 切换到该分支
+  ```
+  git checkout <dev>
+  ```
 
 #### 关联本地分支和远程分支
 > 关联后可以直接git pull不需要加远程分支名
