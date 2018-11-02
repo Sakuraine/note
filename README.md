@@ -1,4 +1,4 @@
-# 一个前端的笔记仓库!
+# My Note Store
 ## HTML
 
 ## CSS
