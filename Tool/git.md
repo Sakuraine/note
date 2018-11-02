@@ -2,11 +2,11 @@
 ## git 安装
 - for Windows
 
-直接去官网下载安装包，安装；
+  直接去官网下载安装包，安装；
 
 - for Mac
 
-直接去官网下载安装包，安装；
+  直接去官网下载安装包，安装；
 
 ## git 操作命令
 
@@ -29,4 +29,28 @@ git log <dev> ^<master>    //查看dev分支有，master分支中没有的
 git log <master> ^<dev>    //查看master分支有，dev分支中没有的
 git show    //查看最近一次合并的详细信息
 git show <commitid>    //查看指定commit hashID的所有修改
+```
+
+> 创建新的工作区
+//生成ssh公钥，会在该目录下生成一个ssh文件
+```
+ssh-keygen -t rsa -C '我的邮箱@163.com'
+```
+//进入ssh文件
+```
+cd .ssh/
+```
+//查看ssh文件的钥，id_rsa为私钥，id_rsa.pub为公钥
+```
+ls -al
+```
+===============================================================================
+复制公钥到git上
+从git上复制项目的ssh地址
+git clone 复制的ssh地址    //下载项目到该文件夹，输入yes
+```
+cd 项目文件名    //进入项目目录
+```
+```
+vim .gitignore    //创建 gitignore文件，用来设置需要忽略项目里不需要的文件
 ```
