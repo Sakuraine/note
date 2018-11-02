@@ -13,7 +13,7 @@
 
 ## [Tool](https://github.com/Sakuraine/note/tree/master/Tool)
 - git
-  分布式版本控制系统
+   - 分布式版本控制系统
 - npm
 - yarn
 - sass
