@@ -1,10 +1,10 @@
 # git
 ## git 安装
-### for Windows
+- for Windows
 
 直接去官网下载安装包，安装；
 
-### for Mac
+- for Mac
 
 直接去官网下载安装包，安装；
 
