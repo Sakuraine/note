@@ -5,7 +5,7 @@
 
 ## JavaScript
 - Frame
-  -React
+  - React
 
 ## Network
 - HTTP
