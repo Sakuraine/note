@@ -2,11 +2,11 @@
 ## 安装
 - for Windows
 
-  直接去官网下载安装包，安装；
+  直接去[官网](https://git-scm.com/download/win)下载安装包，安装；
 
 - for Mac
 
-  直接去官网下载安装包，安装；
+  直接去[官网](https://git-scm.com/download/mac)下载安装包，安装；
 
 ## git 操作命令
 
