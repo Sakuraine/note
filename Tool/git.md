@@ -36,16 +36,16 @@ git show <commitid>    //查看指定commit hashID的所有修改
 ```
 ssh-keygen -t rsa -C '我的邮箱@163.com'
 ```
+
 //进入ssh文件
 ```
 cd .ssh/
 ```
+
 //查看ssh文件的钥，id_rsa为私钥，id_rsa.pub为公钥
 ```
 ls -al
 ```
-
-*****
 
 复制公钥到git上
 
@@ -56,9 +56,12 @@ ls -al
 git clone 复制的ssh地址
 ```
 
+//进入项目目录
 ```
-cd 项目文件名    //进入项目目录
+cd 项目文件名
 ```
+
+//创建 gitignore文件，用来设置需要忽略项目里不需要的文件
 ```
-vim .gitignore    //创建 gitignore文件，用来设置需要忽略项目里不需要的文件
+vim .gitignore
 ```
