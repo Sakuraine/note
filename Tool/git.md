@@ -1,9 +1,12 @@
 # git 安装
 > for Windows
 >> 直接去官网下载安装包，安装；
+
 > for Mac
 >> 直接去官网下载安装包，安装；
+
 # git 操作命令
+
 > 查看
 ```
 cat ~/.ssh/id_rsa.pub    //查看公钥
