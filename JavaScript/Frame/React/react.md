@@ -1,8 +1,8 @@
 # react全家桶的基本结构
 > index.jsx `view层`
 
-```js
-import React from 'react’;
+```jsx
+import React from 'react';
 // 引入action.js里定义的方法
 import {
     fetchTestData,
