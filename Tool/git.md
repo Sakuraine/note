@@ -96,18 +96,18 @@ git checkout -b <dev>
 ```
 
 2. 先创建分支再切换到该分支
-  1. 创建新的分支
-  ```
-  git branch <dev>
-  ```
+    1. 创建新的分支
+    ```
+    git branch <dev>
+    ```
 
-  2. 切换到该分支
-  ```
-  git checkout <dev>
-  ```
+    2. 切换到该分支
+    ```
+    git checkout <dev>
+    ```
 
 #### 关联本地分支和远程分支
-> 关联后可以直接git pull不需要加远程分支名
+> 关联后可以直接`git pull`不需要加远程分支名
 
 ```
 git branch --set-upstream-to=origin/dev  dev
@@ -120,18 +120,17 @@ git branch --set-upstream-to=origin/dev  dev
   git add .
   ```
 
-  
   - 添加更新过的文件
 
   ```
   git add -u
   ```
-  
+
   - 添加单个文件
   ```
   git add 文件路径
   ```
-    
+
 2. 提交到本地分支
 ```
 git  commit -m '提交备注'
