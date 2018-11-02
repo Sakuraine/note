@@ -11,14 +11,14 @@
 
 > BOM `浏览器对象模型`
 
-- Frame
+- Frame | 框架
   - React
 
-## Network
+## Network | 网络
 - HTTP
 - HTTPS
 
-## [Tool](https://github.com/Sakuraine/note/tree/master/Tool)
+## [Tool | 工具](https://github.com/Sakuraine/note/tree/master/Tool)
 - git
 
     > 分布式版本控制系统
