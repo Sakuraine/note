@@ -204,3 +204,54 @@ git  commit -m '提交备注'
 ```
 git push origin <分支名>
 ```
+
+#### 合并分支
+> 将分支最新合并到主分支上
+
+- 切换到主分支
+```
+git checkout master
+```
+
+- 拉取主分支最新代码
+```
+git pull
+```
+
+- 合并分支到主分支
+```
+git merge <分支名>
+```
+
+> 将主分支最近合并到分支上
+
+- 切换到主分支
+```
+git checkout master
+```
+
+- 拉取主分支最新代码
+```
+git pull
+```
+
+- 切换到分支
+```
+git checkout <分支名>
+```
+
+- 合并主分支最新到分支
+```
+git merge master
+```
+
+#### 删除分支
+- 删除本地分支
+```
+git branch -d
+```
+
+- 删除远程分支
+```
+git push origin --delete <分支名>
+```
