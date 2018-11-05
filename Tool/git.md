@@ -180,20 +180,19 @@ git branch --set-upstream-to=origin/dev  dev
 #### 提交本地最新代码到分支
 1. 添加文件到缓存区
   - 添加全部文件
-  ```
-  git add .
-  ```
+```
+git add .
+```
 
   - 添加更新过的文件
-
-  ```
-  git add -u
-  ```
+```
+git add -u
+```
 
   - 添加单个文件
-  ```
-  git add 文件路径
-  ```
+```
+git add 文件路径
+```
 
 2. 提交到本地分支
 ```
