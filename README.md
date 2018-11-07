@@ -28,7 +28,7 @@
 - https
 
 ## [Tool | 工具](https://github.com/Sakuraine/note/tree/master/Tool)
-- [git](https://github.com/Sakuraine/note/blob/master/Tool/git.md)`分布式版本控制系统`
+- [git](https://github.com/Sakuraine/note/blob/master/Tool/git.md) `分布式版本控制系统`
 
 - npm
 
