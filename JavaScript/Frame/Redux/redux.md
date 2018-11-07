@@ -1,4 +1,4 @@
-# react全家桶的基本结构
+# redux全家桶的基本结构
 > index.jsx `view层`
 
 ```jsx
