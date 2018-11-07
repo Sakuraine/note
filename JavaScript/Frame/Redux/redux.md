@@ -10,42 +10,7 @@ import {
 } from './action';
 
 class View extends React.Component {
-    getDefaultProps() {
-    //获取初始props
-    }
     
-    getInitialState() {
-    //定义初始state
-    }
-    
-    componentWillMount() {
-    //装载前
-    }
-    
-    componentDidMount() {
-    //装载后
-    }
-    
-    componentWillReceiveProps(nextProps) {
-    //更新前,接收新的props对象
-    }
-    
-    shouldComponentUpdate(nextProps, nextState) {
-    //更新前,接收新的props对象
-    //返回一个bool值，决定是否更新
-    }
-    
-    compontWillUpdate(nextProps, nextState) {
-    //更新前,接收新的props对象
-    }
-    
-    compontWillUpdate(prevProps, prevState) {
-    //更新后
-    }
-    
-    componentWillUnmount(nextProps) {
-    //卸载前
-    }
 }
 
 // 遍历传入的数据
