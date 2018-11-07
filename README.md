@@ -1,5 +1,4 @@
-# 钟树玲小朋友是个大傻比
-# My Note Store
+# My Note
 ## HTML
 > Hypertext Markup Language `超文本链接标示语言`
 
@@ -15,13 +14,14 @@
 
 - Frame | 框架
   - React
+  - VUE
 
-## Network | 网络
+## [Network | 网络]()
 - HTTP
 - HTTPS
 
 ## [Tool | 工具](https://github.com/Sakuraine/note/tree/master/Tool)
-- git
+- [git](https://github.com/Sakuraine/note/blob/master/Tool/git.md)
 
     > 分布式版本控制系统
 - npm

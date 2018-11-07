@@ -18,14 +18,19 @@ export default connect((state) => {
     //reducer.js里定义的常量
     data: state.testData,
   };
-})(Form.create()(View));
+})(Form.create({
+  onFieldsChange(props, values) {
+  },
+  mapPropsToFields(props) {
+  }
+})(View));
 ```
 
 > action.js `动作层`
 
 用于纯粹的数据处理，尽量不带任何逻辑
 
-```javascript
+```js
 import { fetchutil } from 'util';
 /**
 * 调用接口
@@ -50,7 +55,7 @@ export function noop() {}
 > reducer.js `数据层`
 
 存放数据，所有数据的改变都需要通过reducer.js
-```javascript
+```js
 import { combineReducers } from 'redux';
 /**
 * data
@@ -72,4 +77,4 @@ const testData = (state = { list: [] }, action) => {
 export default combineReducers({
   testData,
 });
-``` 
+```
