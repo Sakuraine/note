@@ -20,8 +20,6 @@
 
 #### From.Item
 
-注意：一个 Form.Item 建议只放一个被 getFieldDecorator 装饰过的 child，当有多个被装饰过的 child 时，`help` `required` `validateStatus` 无法自动生成。
-
 | method | Description | type |
 | ------ | ----------- | ---- |
 |        |             |      |

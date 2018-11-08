@@ -254,3 +254,19 @@ git branch -d
 ```
 git push origin --delete <分支名>
 ```
+
+
+
+#### 更换git名称
+
+```
+git branch -m old_branch new_branch
+```
+
+```
+git push origin :old_branch
+```
+
+```
+git push --set-upstream origin new_branch
+```
