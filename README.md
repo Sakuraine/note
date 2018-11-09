@@ -1,4 +1,7 @@
-# My Note
+# My Note 
+
+`任何事情坚持下去，都会有意想不到的收获`
+
 ## [HTML](#)
 > Hypertext Markup Language `超文本链接标示语言`
 
