@@ -1,6 +1,6 @@
 # Ant Design
 
-## component
+## component 常用API
 
 ### From
 
@@ -14,13 +14,14 @@
   [options: object],
   callback(errors, values)
 ) => void |
-|                   |                                                              |                                                              |
-
-
-
 #### From.Item
 
 | method | Description | type |
 | ------ | ----------- | ---- |
 |        |             |      |
 
+### Tabel
+
+| method   | Description        | type                        | default  |
+| -------- | ------------------ | --------------------------- | -------- |
+| position | 指定分页显示的位置 | 'top' \| 'bootom' \| 'both' | 'bootom' |

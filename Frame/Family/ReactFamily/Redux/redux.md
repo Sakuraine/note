@@ -41,7 +41,7 @@
 
 ### 代码结构
 
-> index.jsx `view层`
+> **index.jsx** `view层`
 
 ```jsx
 import React from 'react';
@@ -74,7 +74,7 @@ export default connect((state) => {
 })(View));
 ```
 
-> action.js `动作层`
+> **action.js** `动作层`
 
 用于纯粹的数据处理，尽量不带任何逻辑
 
@@ -102,7 +102,7 @@ export function fetchTestData(param) {
 export function noop() {}
 ```
 
-> reducer.js `数据层`
+> **reducer.js** `数据层`
 
 处理数据，所有数据的改变都需要通过reducer.js
 ```js
