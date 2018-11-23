@@ -92,3 +92,19 @@ const newStr = parseInt(str, 10);
 对比时间和当前时间
 
 hash
+
+## console对象
+
+```js
+console.log()
+```
+
+弹出输入的对象
+
+```js
+console.table()
+```
+
+已表格形式弹出对象
+
+trim()
