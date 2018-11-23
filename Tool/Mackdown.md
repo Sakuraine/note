@@ -36,7 +36,8 @@
 
 ## 引用
 > 引用
->> 引用
+>
+> > 引用
 
 > 语法
 ```
@@ -131,7 +132,8 @@ function(){}
 
 > 语法
 ```
-    ```
+
+```
         function() {
             alert('hellow, world');
         }
@@ -174,7 +176,7 @@ function(){}
 
 ### 图表
 #### 饼状图&折线图&柱状图&条形图
-```chart
+​```chart
 ,预算,收入,花费,债务
 June,5000,8000,4000,6000
 July,3000,1000,4000,3000
@@ -206,7 +208,7 @@ y.suffix: $
     x.title: Amount
     y.title: Month
     y.suffix: $
-    ```
+```
 ```
 ##### type:
 饼状图：pie
@@ -215,7 +217,7 @@ y.suffix: $
 条形图：bar
 
 #### 流程图
-```mermaid
+​```mermaid
 graph TD
 A[模块A] -->|A1| B(模块B)
 B --> C{判断条件C}
@@ -233,11 +235,11 @@ C -->|条件C3| F[模块F]
     C -->|条件C1| D[模块D]
     C -->|条件C2| E[模块E]
     C -->|条件C3| F[模块F]
-    ```
+```
 ```
 
 #### 时序图
-```mermaid
+​```mermaid
 sequenceDiagram
 A->>B: 是否已收到消息？
 B-->>A: 已收到消息
@@ -249,11 +251,11 @@ B-->>A: 已收到消息
     sequenceDiagram
     A->>B: 是否已收到消息？
     B-->>A: 已收到消息
-    ```
+```
 ```
 
 #### 甘特图
-```mermaid
+​```mermaid
 gantt
 title 甘特图
 dateFormat  YYYY-MM-DD
@@ -277,6 +279,8 @@ section 项目B
     section 项目B
     任务3      :2018-06-12  , 12d
     任务4      : 24d
-    ```
+```
 ```
 
+
+```

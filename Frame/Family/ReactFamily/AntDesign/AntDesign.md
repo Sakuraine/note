@@ -25,3 +25,5 @@
 | method   | Description        | type                        | default  |
 | -------- | ------------------ | --------------------------- | -------- |
 | position | 指定分页显示的位置 | 'top' \| 'bootom' \| 'both' | 'bootom' |
+
+Col 
