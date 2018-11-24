@@ -1,6 +1,16 @@
 # JS基础
 
-## 遍历
+## 迭代方法
+
+### every()
+
+### filter()
+
+### forEach()
+
+### map()
+
+### some()
 
 > map遍历
 
