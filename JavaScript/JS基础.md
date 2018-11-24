@@ -108,3 +108,22 @@ console.table()
 已表格形式弹出对象
 
 trim()
+
+## 树状结构
+
+```jsx
+const Tree = (tree, bool = true) => {
+  return tree.map((item) => {
+		if (item.children) {
+      return (
+        <div style={{ paddingLeft: '20px' }}>
+          <span value={item.id} title={item.name} key={item.id} disabled={bool && item.id === '0'} />
+    			{Tree(item.children)}
+      	</div>
+      );
+    }
+    return <span value={item.id} title={item.name} key={item.id} />;
+  });
+};
+```
+
