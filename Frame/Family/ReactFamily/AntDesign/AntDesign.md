@@ -99,3 +99,31 @@
 
 ### 其他
 
+select用法
+
+```jsx
+<FormItem
+            {...formItemLayout1}
+            label="分组:"
+          >
+            {getFieldDecorator('pati_group_id', {
+              initialValue: data.pati_group_id ? { label: data.pati_group_name, value: data.pati_group_id } : undefined,
+            })(
+              <Select
+                labelInValue
+                showSearch
+                allowClear
+                filterOption={e => true}
+                // onSearch={value => this.handleSelect(value, 'group')}
+                placeholder="请选择"
+              >
+                {
+                  groupData.map((item, i) => {
+                    return <Option key={item.label_id}>{item.label_name}</Option>;
+                  })
+                }
+              </Select>
+            )}
+          </FormItem>
+```
+
