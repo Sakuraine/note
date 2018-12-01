@@ -127,3 +127,62 @@ select用法
           </FormItem>
 ```
 
+tabel 功能渲染
+
+```jsx
+const columns = [{
+  title: '序号',
+  dataIndex: 'index',
+  key: 'index',
+  width: 100,
+}, {
+  title: '操作',
+  dataIndex: 'action',
+  key: 'action',
+  width: 100,
+}]
+class List extends React.Component {
+	componentWillMount() {
+    const { dispatch } = this.props;
+    util.tableAddRender(columns, 'index', (text, record, i) => {
+      const key = `${i + 1}`;
+      return (
+        <div>{key}</div>
+      );
+    });
+    util.tableAddRender(columns, 'action', (text, record, i) => {
+      return (
+        <div>
+          <a onClick={e => this.handleDetail(record.package_id)}>详情</a>;
+          <a onClick={e => this.handleDelete(record.package_id)}>删除</a>;
+        </div>
+      );
+    });
+  }
+  
+  /**
+   * 表格渲染--状态
+   * @return {[type]}        [description]
+   */
+  _renderPatiState = (text, record) => {
+    let showText;
+    if (record.package_enable === 0) {
+      showText = '停用';
+    } else if (record.package_enable === 1) {
+      showText = '有效';
+    }
+    return showText;
+  }
+}
+```
+
+form 表单使用时需要注意点的点：
+
+- 数据输入不进去
+
+  查看数据是否双向绑定了，是否在前面定义了字段名
+
+- 校验时只在第一个输入框下有校验提示
+
+  每个输入的框都应该使用一个FormItem包裹住，
+
