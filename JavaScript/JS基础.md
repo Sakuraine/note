@@ -1,5 +1,100 @@
 # JS基础
 
+## 引用类型
+
+##### 
+
+> map遍历
+
+返回一个新的数组
+
+```jsx
+{['one', 'two'].map((type) => {
+	const title = `hellow${type}`;
+	return (
+		<div>{title}</div>
+	)
+})}
+```
+
+> for...in
+
+```js
+for (value in Object) {
+  
+}
+```
+
+> for...of
+
+```js
+for (const item of Object) {
+  
+}
+```
+
+> forEach()
+
+```
+stringLIst.forEach()
+```
+
+
+
+## 字符串
+
+**String.indexOf(String)**
+
+> 返回值`Number`
+
+‘ - ’ 在 str 字符串里第一次出现的索引
+
+```js
+const strindex = str.indexOf('-');
+```
+
+**String.lastIndexOf(String)**
+
+> 返回值`Number`
+
+‘ - ’ 在 str 字符串里最后一次出现的索引
+
+```js
+const strindex = str.lastIndexOf('-');
+```
+
+**String.substring(String, String)**
+
+> 返回值`String`
+
+str 字符串里索引 a 到 b 的字符
+
+```js
+const newStr = str.substring(a, b);
+```
+
+**String.parseInt(String, Number)**
+
+>返回值`Number`
+
+将`String`转换成10进制的`Number`
+
+```js
+const newStr = parseInt(str, 10);
+```
+
+**toFixed()**
+
+> 返回值``
+
+**String.match(String, Reg)**
+
+>
+
+## RegExp对象
+
+### [正则](https://baike.baidu.com/item/正则表达式/1700215?fr=aladdin)
+
 ## js类型转换
 
 ### 显示转换
@@ -24,8 +119,6 @@
   - 如果是对象，则调用对象的 valueOf() 方法，然后然后依据前面的规则转换返回的值
       - 如果转换的结果是 NaN，则调用对象的 toString() 方法，再次依照前面的规则转换返回的字符串值。
 
-
-
 ##### parseInt(string, radix)
 
 > 将字符串转换为整数类型的数值
@@ -38,8 +131,6 @@
  - 如果上步解析的结果以0开头，则将其当作八进制来解析；如果以0x开头，则将其当作十六进制来解析
  - 如果指定radix参数，则以radix为基数进行解析
 
-
-
 ##### parseFloat(string)
 
 > 将字符串转换为浮点数类型的数值
@@ -47,8 +138,6 @@
 规则：
 
 - 它的规则与parseInt基本相同，但也有点区别：字符串中第一个小数点符号是有效的，另外parseFloat会忽略所有前导0，如果字符串包含一个可解析为整数的数，则返回整数值而不是浮点数值
-
-
 
 #### 转换为字符串类型：
 
@@ -200,109 +289,6 @@
 - 如果一个操作值为NaN，则相等比较返回false
 
 - 如果两个操作值都是对象，则比较它们是不是指向同一个对象
-
-## 迭代方法
-
-### every()
-
-### filter()
-
-### forEach()
-
-### map()
-
-### some()
-
-> map遍历
-
-返回一个新的数组
-
-```jsx
-{['one', 'two'].map((type) => {
-	const title = `hellow${type}`;
-	return (
-		<div>{title}</div>
-	)
-})}
-```
-
-> for...in
-
-```js
-for (value in Object) {
-  
-}
-```
-
-> for...of
-
-```js
-for (const item of Object) {
-  
-}
-```
-
-> forEach()
-
-```
-stringLIst.forEach()
-```
-
-
-
-## 字符串
-
-**String.indexOf(String)**
-
-> 返回值`Number`
-
-‘ - ’ 在 str 字符串里第一次出现的索引
-
-```js
-const strindex = str.indexOf('-');
-```
-
-**String.lastIndexOf(String)**
-
-> 返回值`Number`
-
-‘ - ’ 在 str 字符串里最后一次出现的索引
-
-```js
-const strindex = str.lastIndexOf('-');
-```
-
-**String.substring(String, String)**
-
-> 返回值`String`
-
-str 字符串里索引 a 到 b 的字符
-
-```js
-const newStr = str.substring(a, b);
-```
-
-**String.parseInt(String, Number)**
-
->返回值`Number`
-
-将`String`转换成10进制的`Number`
-
-```js
-const newStr = parseInt(str, 10);
-```
-
-**toFixed()**
-
-> 返回值``
-
-**String.match(String, Reg)**
-
->
-
-## RegExp对象
-
-### [正则](https://baike.baidu.com/item/正则表达式/1700215?fr=aladdin)
 
 ## 时间戳用法
 
