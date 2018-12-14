@@ -30,3 +30,25 @@ export default (
 )
 ```
 
+### 路由跳转 -- 返回
+
+history.go(-1)返回后，原界面数据会丢失
+
+history.back(-1)返回后，会保存原界面上的数据
+
+window.history.go(-1);
+
+this.props.router.goBack();
+
+hashHistory.goBack(-1);
+
+
+
+```js
+history.go(1);
+history.goForward();
+
+history.go(-1); // 返回后，原界面数据会丢失
+history.back(-1); // 返回后，会保存原界面上的数据
+history.goBack();
+```
