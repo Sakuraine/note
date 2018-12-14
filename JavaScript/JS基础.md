@@ -81,7 +81,7 @@ str 字符串里索引 a 到 b 的字符
 const newStr = str.substring(a, b);
 ```
 
-**parseInt(String, Number)**
+**String.parseInt(String, Number)**
 
 >返回值`Number`
 
@@ -95,13 +95,23 @@ const newStr = parseInt(str, 10);
 
 > 返回值``
 
+**String.match(String, Reg)**
 
+>
+
+## RegExp对象
+
+### [正则](https://baike.baidu.com/item/正则表达式/1700215?fr=aladdin)
 
 ## 时间戳用法
 
 对比时间和当前时间
 
 hash
+
+## canvs画布
+
+drawImage方法
 
 ## console对象
 
