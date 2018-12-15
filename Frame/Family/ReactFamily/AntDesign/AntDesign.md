@@ -187,3 +187,29 @@ form 表单使用时需要注意点的点：
 
   每个输入的框都应该使用一个FormItem包裹住，
 
+```jsx
+<FormItem
+  {...formItemLayout1}
+  label="分组:"
+  >
+  {getFieldDecorator('pati_group_id', {
+    initialValue: data.pati_group_id ? { label: data.pati_group_name, value: data.pati_group_id } : undefined,
+  })(
+    <Select
+      labelInValue
+      showSearch
+      allowClear
+      filterOption={e => true}
+      // onSearch={value => this.handleSelect(value, 'group')}
+      placeholder="请选择"
+      >
+      {
+        groupData.map((item, i) => {
+          return <Option key={item.label_id}>{item.label_name}</Option>;
+        })
+      }
+    </Select>
+  )}
+</FormItem>
+```
+
