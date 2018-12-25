@@ -212,3 +212,31 @@ form 表单使用时需要注意点的点：
 </FormItem>
 ```
 
+校验
+
+```jsx
+const reg1 = /^([0-9]+(\.\d+)?|0\.\d+)$/; // 正数
+const match = (value) => {
+  return reg.test(value);
+};
+
+<FormItem>
+  {getFieldDecorator(`item_no_${key}`, {
+    initialValue: item.item_no || '',
+    rules: [{
+      required: true,
+      message: '必填',
+    }, {
+      validator: (rules, val, callback) => {
+      if (val && !match(val)) {
+      callback('请输入数字');
+      }
+    	callback();
+    	}
+    	}],
+    })(
+    <Input placeholder="问题编号" />
+  )}
+</FormItem>
+```
+
