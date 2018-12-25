@@ -296,6 +296,8 @@ const newStr = parseInt(str, 10);
 
 hash
 
+
+
 ## canvs画布
 
 drawImage方法
