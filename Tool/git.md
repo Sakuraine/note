@@ -8,6 +8,8 @@
 
   直接去[官网](https://git-scm.com/download/mac)下载安装包，安装；
 
+
+
 ## git 操作命令
 
 ### 查看
@@ -89,6 +91,12 @@
   git log --graph
   ```
 
+- 查看所有版本（包括被回滚的版本）
+
+  ```
+  git log --reflog
+  ```
+
 - 查看dev分支有，master分支中没有的
 
   ```
@@ -112,6 +120,14 @@
   ```
   git show <commitid>
   ```
+
+- 查看所有输入过的命令记录
+
+  ```
+  git reflog
+  ```
+
+
 
 ### 创建新的工作区
 
@@ -155,7 +171,10 @@
   vim .gitignore
   ```
 
+
+
 ### 下载
+
 - 需要输入账号密码pull代码前输入
 
   ```
@@ -176,7 +195,10 @@
   git pull
   ```
 
+
+
 ### 分支
+
 #### 创建分支
 > 两种方法创建分支
 
@@ -300,7 +322,7 @@ git branch --set-upstream-to=origin/dev  dev
 
 ####冲突 
 
-##### 查看冲突
+##### 查看状态
 
 ```
 git status
@@ -308,21 +330,106 @@ git status
 
 ##### 解决冲突
 
-> 将分支合并到主分支
+- 自己分支合并到主分支时有冲突
 
-- 切换到主分支
-
-  ```
-  git checkout <master>
-  ```
-
-- 合并分支`如果没有冲突会提示合并成功`
+  > 正常提交
 
   ```
-  git merge <dev>
+  git add .
   ```
 
-- 如果有冲突手动解决冲突后再提交
+  ```
+  git commit -m 'description'
+  ```
+
+  ```
+  git push origin yourBranchName
+  ```
+
+  - 发起请求 & 切换到目标分支合并自己的分支版本
+    - 在git仓库网址内申请 自己分支 -> 目标分支 merge 合并；
+
+    或者
+
+    - 切换到目标分支拉去自己分支（不推荐）
+
+      ```
+      git checkout master
+      ```
+
+      ```
+      git merge yourBranchName
+      ```
+
+  - **产生冲突**
+
+    - 先切换到目标分支拉去远端最新（切换前切记提交自己分支代码）
+
+      ```
+      git checkout master
+      ```
+
+      ```
+      git pull
+      ```
+
+    - 回到自己分支
+
+      ```
+      git checkout yourBranchName
+      ```
+
+    - 将目标分支合并到自己分支（此时提示有冲突）
+
+      ```
+      git merge master
+      ```
+
+    - 打开文件解决冲突
+
+      此时文件内：
+
+      ```
+      <<<<<<< HEAD
+      文件差异内容（传入）
+      =======
+      文件差异内容（本地）
+      >>>>>>> yourBranchName
+      ```
+
+      手动删除 `<<<<<<< HEAD`、 `=======` 、`>>>>>>> yourBranchName`和冲突的内容
+
+    - 再次提交
+
+      ```
+      git add .
+      ```
+
+      ```
+      git commit -m 'merge'
+      ```
+
+      ```
+      git push origin yourBranchName
+      ```
+
+    - 再次合并（此时没有冲突，成功合并）
+
+#### 版本回滚
+
+> 回滚到最近一次的提交前
+
+```
+git reset --hard HEAD^
+```
+
+> 取消回退
+
+```
+git reset --hard commit_id // 上一次提交的commit_id，甚至任何一次提交的commit_id
+```
+
+
 
 #### 更换仓库名称
 
@@ -337,6 +444,8 @@ git push origin :old_branch
 ```
 git push --set-upstream origin new_branch
 ```
+
+
 
 ### 自定义Git（高级技巧）
 
