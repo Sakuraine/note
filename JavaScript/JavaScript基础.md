@@ -1,4 +1,4 @@
-# JS基础
+# JavaScript基础
 
 ## 引用类型
 
