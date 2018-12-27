@@ -261,6 +261,7 @@ git branch --set-upstream-to=origin/dev  dev
    ```
 
 #### 合并分支
+
 > 将分支最新合并到主分支上
 
 - 切换到主分支
@@ -307,7 +308,20 @@ git branch --set-upstream-to=origin/dev  dev
   git merge master
   ```
 
+##### git merge命令
+
+> git merge --no-ff
+
+```
+
+```
+
+
+
+> git merge --squash
+
 #### 删除分支
+
 - 删除本地分支
 
   ```
@@ -423,7 +437,7 @@ git status
 git reset --hard HEAD^
 ```
 
-> 取消回退
+> 取消回滚
 
 ```
 git reset --hard commit_id // 上一次提交的commit_id，甚至任何一次提交的commit_id

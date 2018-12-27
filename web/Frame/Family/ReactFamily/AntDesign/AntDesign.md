@@ -100,7 +100,7 @@
 
 ### 其他
 
-select用法
+select label value用法
 
 ```jsx
 <FormItem
