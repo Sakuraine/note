@@ -100,7 +100,7 @@
 
 ### 其他
 
-select用法
+select label value用法
 
 ```jsx
 <FormItem
@@ -126,6 +126,34 @@ select用法
   )}
 </FormItem>
 ```
+
+TreeSelect树选择器
+
+```jsx
+import { TreeNode } = antd;
+const TreeNode = TreeSelect.TreeNode;
+
+const generateTreeNodes = (tree, bool = true) => {
+  return tree.map((item) => {
+    if (item.children) {
+      return (
+        <TreeNode
+          value={item.id}
+          name={item.name}
+          title={item.name}
+          key={item.id}
+          disabled={bool && item.id === '0'}
+        >
+          {generateTreeNodes(item.children)}
+        </TreeNode>
+      );
+    }
+    return <TreeNode value={item.id} name={item.name} title={item.name} key={item.id} />;
+  });
+};
+```
+
+
 
 tabel 功能渲染
 
@@ -238,5 +266,15 @@ const match = (value) => {
     <Input placeholder="问题编号" />
   )}
 </FormItem>
+```
+
+```js
+
+export default connect((state) => {
+  return {
+    data: state.RefractiveCenterList,
+    cache: state.cache,
+  };
+})(Form.create()(RefractiveCenter));
 ```
 
