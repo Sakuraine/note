@@ -320,6 +320,12 @@ git branch --set-upstream-to=origin/dev  dev
 
 > git merge --squash
 
+```
+
+```
+
+
+
 #### 删除分支
 
 - 删除本地分支

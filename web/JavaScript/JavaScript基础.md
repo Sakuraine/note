@@ -344,3 +344,78 @@ const Tree = (tree, bool = true) => {
 const newObj = Object.assign({}, { a: 1, b: 2}, { c: 3 }); //        
 ```
 
+
+
+发布订阅
+
+```jsx
+/**
+* 发布订阅
+* @param  {[type]} name [description]
+* @param  {[type]} func [description]
+* @return {[type]}      [description]
+*/
+static Observer = (() => {
+	const callbacks = {};
+  return {
+    subscribe(name, func, context) { // 订阅
+      callbacks[name] = { func, context };
+      return function () { // 默认返回订阅
+      	callbacks[name] = null;
+      };
+    },
+
+    publish(name, ...param) { // 发布
+      const { func, context } = callbacks[name];
+      return func && func.apply(context, param);
+    },
+
+    unsubscribe(name, func) { // 取消订阅
+      callbacks[name] = null;
+      }
+    };
+})()
+```
+
+
+
+```js
+/**
+   * 改变字段
+   * @param {[type]} e      事件
+   * @param {[type]} field  字段名
+   * @param {[type]} code   exam_code
+   * @return {[type]}       [description]
+   */
+handleChengeMedicalTreatmentData = (e, field, code) => {
+  const { dispatch, data, form } = this.props;
+  const exam_item_list = data.medicalTreatment.exam_item_list;
+
+  let dataList = [];
+  // 修正参数
+  // 如果e是undefined说明修改的是一系列参数
+  if (typeof e === 'undefined') {
+    // 找到具体数据
+    dataList = exam_item_list.map((item) => {
+      if (item.exam_code === code) {
+        return { ...item, ...field };
+      }
+      return { ...item };
+    });
+  } else {
+    // 参数修正
+    // 判断value值是否史target对象
+    const value = e.target ? e.target.value : e;
+    // 找到具体数据
+    dataList = exam_item_list.map((item) => {
+      if (item.exam_code === code) {
+        return { ...item, [field]: value };
+      }
+      return { ...item };
+    });
+  }
+  // 修改字段值
+  dispatch(changeMedicalTreatment({ exam_item_list: dataList }));
+}
+```
+
