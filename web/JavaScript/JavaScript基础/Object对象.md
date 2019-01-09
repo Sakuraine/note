@@ -56,22 +56,63 @@
     <td>undefined</td>
   </tr>
 </table>
+##### Object.defineProperty(obj, prop, descriptor)
 
-Object.defineProperty(a, 'name', {})
+> 定义和用法
 
-> 修改属性默认的特性
+修改属性默认的特性
+
+> 参数
+
+`obj`
+
+要在其上定义属性的对象。
+
+`prop`
+
+要定义或修改的属性的名称。
+
+`descriptor`
+
+将被定义或修改的属性描述符。
+
+> 返回值
+
+被传递给函数的对象
 
 
 
-Object.defineProperties(a, 'name', {})
+##### Object.defineProperties(obj, 'name', {})
 
-> 修改属性默认的特性
+> 定义和用法
+
+修改属性默认的特性
+
+> 参数
+
+`obj`
+
+要在其上定义属性的对象。
+
+`prop`
+
+要定义或修改的属性的名称。
+
+`descriptor`
+
+将被定义或修改的属性描述符。
+
+> 返回值
+
+被传递给函数的对象
 
 
 
-Object.getOwnPropertyDescriptor(a, 'name')
+##### Object.getOwnPropertyDescriptor(obj, 'name')
 
-> 读取属性默认的特性
+> 定义和用法
+
+读取属性默认的特性
 
 ## 原型
 

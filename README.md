@@ -53,7 +53,6 @@
     - Javascript基础
       - Javascript基础
       - JavaScript原理
-      - (es6)
       - Array对象
       - Data对象
       - error对象
