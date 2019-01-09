@@ -108,11 +108,27 @@
 
 
 
-##### Object.getOwnPropertyDescriptor(obj, 'name')
+##### Object.getOwnPropertyDescriptor(obj, prop)
 
 > 定义和用法
 
 读取属性默认的特性
+
+> 参数
+
+`obj`
+
+需要查找的目标对象
+
+`prop`
+
+目标对象内属性名称（String类型）
+
+> 返回值
+
+如果指定的属性存在于对象上，则返回其属性描述符对象（property descriptor），否则返回 [`undefined`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined)。
+
+
 
 ## 原型
 
