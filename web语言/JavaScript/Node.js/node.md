@@ -37,7 +37,6 @@ hellow-world.js
 ```js
 const http = require('http'); // 引入HTTP模块
 
-// 创建服务器
 /**
  * 创建服务器
  */
