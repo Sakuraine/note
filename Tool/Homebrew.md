@@ -93,3 +93,14 @@ $ brew outdated
 ```
 $ brew cleanup -n
 ```
+
+
+
+## 搜索
+
+### 搜索指定的版本
+
+```
+brew search <packageName>
+```
+
