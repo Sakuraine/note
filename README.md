@@ -42,30 +42,41 @@
              9Bi,:,,,,......                        ..r91;;;;;iirrsss1ss1111
 ```
 
-- web前端
+- Web Language
   - HTML
     - ...
   - CSS
     - ...
+  - SVG
+    - ...
   - JavaScript
     - Javascript基础
-    - JavaScript原理
-    - (es6)
-    - Array对象
-    - Data对象
-    - error对象
-    - ...
-  - Family
-    - ReactFamily
-      - React
-      - Router
-      - Redux
-      - Ant Design
+      - Javascript基础
+      - JavaScript原理
+      - Array对象
+      - Data对象
+      - error对象
       - ...
-    - VueFamily
+    - ES6
+      - Set数据结构
       - ...
-    - Component
-      - eCharts
+    - Family
+      - ReactFamily
+        - React
+        - Router
+        - Redux
+        - Ant Design
+        - ...
+      - VueFamily
+        - ...
+      - Component
+        - jQuery
+        - d3
+        - eCharts
+    - TypeScript
+    - NodeJs
+      - node
+      - npm
 - Net
   - HTTP
   - ...
@@ -74,8 +85,14 @@
   - svn
   - webpack
   - mackdown
+  - Linux
+  - subelime
+  - Homebrew
   - ...
+- 
 - Program
+  - DataStructure
+    - ...
   - DesignPatterns
     - ...
 - ...

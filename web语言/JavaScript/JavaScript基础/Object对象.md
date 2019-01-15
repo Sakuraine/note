@@ -56,22 +56,79 @@
     <td>undefined</td>
   </tr>
 </table>
+##### Object.defineProperty(obj, prop, descriptor)
 
-Object.defineProperty(a, 'name', {})
+> 定义和用法
 
-> 修改属性默认的特性
+修改属性默认的特性
+
+> 参数
+
+`obj`
+
+要在其上定义属性的对象。
+
+`prop`
+
+要定义或修改的属性的名称。
+
+`descriptor`
+
+将被定义或修改的属性描述符。
+
+> 返回值
+
+被传递给函数的对象
 
 
 
-Object.defineProperties(a, 'name', {})
+##### Object.defineProperties(obj, 'name', {})
 
-> 修改属性默认的特性
+> 定义和用法
+
+修改属性默认的特性
+
+> 参数
+
+`obj`
+
+要在其上定义属性的对象。
+
+`prop`
+
+要定义或修改的属性的名称。
+
+`descriptor`
+
+将被定义或修改的属性描述符。
+
+> 返回值
+
+被传递给函数的对象
 
 
 
-Object.getOwnPropertyDescriptor(a, 'name')
+##### Object.getOwnPropertyDescriptor(obj, prop)
 
-> 读取属性默认的特性
+> 定义和用法
+
+读取属性默认的特性
+
+> 参数
+
+`obj`
+
+需要查找的目标对象
+
+`prop`
+
+目标对象内属性名称（String类型）
+
+> 返回值
+
+如果指定的属性存在于对象上，则返回其属性描述符对象（property descriptor），否则返回 [`undefined`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined)。
+
+
 
 ## 原型
 
