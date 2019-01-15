@@ -42,7 +42,7 @@
              9Bi,:,,,,......                        ..r91;;;;;iirrsss1ss1111
 ```
 
-- web
+- Web Language
   - HTML
     - ...
   - CSS
@@ -73,6 +73,10 @@
         - jQuery
         - d3
         - eCharts
+    - TypeScript
+    - NodeJs
+      - node
+      - npm
 - Net
   - HTTP
   - ...
@@ -81,7 +85,11 @@
   - svn
   - webpack
   - mackdown
+  - Linux
+  - subelime
+  - Homebrew
   - ...
+- 
 - Program
   - DataStructure
     - ...
