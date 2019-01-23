@@ -5,6 +5,7 @@ REPL 命令
 ```
 - 退出当前终端
 	control + c
+	.exit
 
 - 退出 Node REPL
 	control + c 按下两次

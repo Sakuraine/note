@@ -1,3 +1,39 @@
+HTTP协议（HyperText Transfer Protocol，超文本传输协议）
+
+HTTP是一个基于TCP/IP通信协议来传递数据（HTML 文件, 图片文件, 查询结果等）。
+
+
+
+HTTP协议通信流程：
+
+```mermaid
+graph TB
+A[Web Browser]
+B[HTTP Server]
+C[CGI Program]
+D[Database]
+
+A -- HTTP Protocol --> B
+B -- HTTP Protocol --> A
+B --> C
+C --> B
+C --> D
+D --> C
+```
+
+## http请求方法
+
+
+| 方法 | description |
+| ------- | --------------------------------------------------------- |
+| GET     | 请求指定的页面信息，并返回实体主体。                         |
+| HEAD    | 类似于get请求，只不过返回的响应中没有具体的内容，用于获取报头 |
+| POST    | 向指定资源提交数据进行处理请求（例如提交表单或者上传文件）。数据被包含在请求体中。POST请求可能会导致新的资源的建立和/或已有资源的修改。 |
+| PUT     | 从客户端向服务器传送的数据取代指定的文档的内容。             |
+| DELETE  | 请求服务器删除指定的页面。                                  |
+| CONNECT | HTTP/1.1协议中预留给能够将连接改为管道方式的代理服务器。     |
+| OPTIONS | 允许客户端查看服务器的性能。                                |
+| TRACE   | 回显服务器收到的请求，主要用于测试或诊断。                   |
 ## http状态码
 ### 消息 1XX
 
@@ -33,4 +69,6 @@
 | 500   | Internal Server Error | 服务器端的源代码出现错误 |
 | 502 | Bad Gateway | 作为网关或者代理工作的服务器尝试执行请求时，从上游服务器接收到无效的响应 |
 | 504 | Gateway Timeout | 作为网关或者代理工作的服务器尝试执行请求时，未能及时从上游服务器（URI标识出的服务器，例如HTTP、FTP、LDAP）或者辅助服务器（例如DNS）收到响应 |
+
+
 
