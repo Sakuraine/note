@@ -63,8 +63,12 @@
 | ----------------- | ---------------------- | :-------------------------- |
 | getFieldDecorator | 用于和表单进行双向绑定 |                             |
 | getFieldValue     | 获取一个输入控件的值   | Function(fieldName: string) |
+| getFieldsValue | 获取一组输入控件的值，如不传入参数，则获取全部组件的值 | Function([fieldNames: string[]]) |
 |  validateFields   | 校验并获取一组输入域的值与 Error，若 fieldNames 参数为空，则校验全部组件 |  |
-| setFieldsValue |  | |
+| setFields | 设置一组输入控件的值与错误状态 | |
+| setFieldsValue | 设置一组输入控件的值（注意：不要在 `componentWillReceiveProps` 内使用，否则会导致死循环，[原因](https://github.com/ant-design/ant-design/issues/2985)） | |
+| resetFields | 重置一组输入控件的值（为 `initialValue`）与状态，如不传入参数，则重置所有组件 | |
+| validateFields | 校验并获取一组输入域的值与 Error，若 fieldNames 参数为空，则校验全部组件 | |
 
 ##### From.Item
 

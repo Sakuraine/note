@@ -1,19 +1,14 @@
 select label value用法
 
 ```jsx
-<FormItem
-  {...formItemLayout1}
-  label="分组:"
-  >
+<FormItem>
   {getFieldDecorator('pati_group_id', {
     initialValue: data.pati_group_id ? { label: data.pati_group_name, value: data.pati_group_id } : undefined,
   })(
     <Select
       labelInValue
-      showSearch
-      allowClear
-      filterOption={e => true}
-      placeholder="请选择"
+      showSearch // 是否支持搜索
+      filterOption={(value, option) => option.props.children.indexOf(value) > -1} // 搜索返回的列表
       >
       {
         groupData.map((item, i) => {
