@@ -132,3 +132,16 @@
 
 ## 原型
 
+Object.prototype
+
+> 是一个指针，指向该实例的原型对象。
+
+> es5 规定这个指针叫做 `[[Prototype]]` ,在浏览器中使用 `__Proto_` 属性访问
+
+Object.prototype.constructor
+
+> 是原型对象上的一个属性，原型上最初只包含constructor属性
+
+**isPrototypeOf**
+
+> 如果[[Prototype]]指向调用 isPrototypeOf() 方法的对象（Object.prototype）,那么这个方法就会返回true

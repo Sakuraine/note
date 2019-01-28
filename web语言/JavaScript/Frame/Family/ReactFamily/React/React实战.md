@@ -58,10 +58,9 @@ export default Module;
 
     ├── FlieName/                            	名称
     │   ├── List/          	                  列表界面
-    |		|		├──index.js												
-    |		|		├──view.js												
-    |		|		├──action.js											
-    |		|		└──reducer.js											
+    |		|		├──index.js												主/视图层
+    |		|		├──action.js											数据处理层（没有逻辑，纯数据变化）
+    |		|		└──reducer.js											数据层
     │   └── Detail/                           详情界面
     |		|		├──index.js												
     |		|		├──action.js											
