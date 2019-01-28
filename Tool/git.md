@@ -449,7 +449,7 @@ git status
 git reset --hard HEAD^
 ```
 
-> 取消回滚
+> 取消回滚/回滚到指定版本
 
 ```
 git reset --hard commit_id // 上一次提交的commit_id，甚至任何一次提交的commit_id
@@ -487,3 +487,10 @@ git push --set-upstream origin new_branch
 
 #### 搭建Git服务器
 
+
+
+
+
+
+
+git remote prune origin

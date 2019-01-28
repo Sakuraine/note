@@ -31,6 +31,9 @@ brew install node
 REPL 命令
 
 ```
+- 进入node交互模式
+	node
+
 - 退出当前终端
 	control + c
 	.exit
