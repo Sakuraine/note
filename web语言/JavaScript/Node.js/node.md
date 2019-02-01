@@ -1,3 +1,5 @@
+# Node.js
+
 Node.js不是一个JavaScript应用，而是一个JavaScript的运行环境，由C++语言编写。
 
 Node.js 是**单进程单线程应用程序**，但是因为 V8 引擎提供的异步执行回调接口，通过这些接口可以处理大量的并发，所以性能非常高。
@@ -16,9 +18,9 @@ Node.js 使用事件驱动模型，当web server接收到请求，就把它关�
 
 在事件驱动模型中，会生成一个主循环来监听事件，当检测到事件时触发回调函数。
 
-# 安装
+## 安装
 
-## Mac OS
+### Mac OS
 
 终端输入
 
@@ -28,7 +30,9 @@ brew install node
 
 
 
-REPL 命令
+## REPL （Read Eval Print Loop:交互式解释器）
+
+### 命令
 
 ```
 - 进入node交互模式
@@ -62,7 +66,36 @@ REPL 命令
 	.load <filename>
 ```
 
+## 模块
 
+### require引入模块
+
+```js
+// 引入原生模块
+const http = require('http');
+// 变量名 = require('引入的模块名');
+
+// 引入文件模块
+const fileName = require('./fileName');
+// 变量名 = require('引入的文件路径，可以省略后缀名');
+```
+
+### exports导出模块
+
+```js
+const util = {
+	/**
+	 * 方法名
+	 * @param  {[type]} arr [description]
+	 * @return {[type]}			[description]
+	 */
+	functionName: function(arr) {
+		return arr;
+	}
+}
+
+module.exports = util;
+```
 
 hellow-world.js
 
@@ -89,3 +122,14 @@ const server = http.createServer((request, response) => {
 
 
 
+- node的特点
+
+事件驱动
+
+异步、非阻塞I/O
+
+单线程
+
+- node的软肋
+
+CPU密集型应用、模版渲染、压缩/解压缩、加/解密

@@ -1,5 +1,68 @@
 # Object对象
 
+## 创建对象的模式
+
+### 工厂模式
+
+> 工厂模式虽然解决了创建多个相似对象的问题，但却没有解决对象识别的问题(即怎样知道一个对象的类型)
+
+- 在方法内显式的创建一个对象，将属性和方法赋值给新创建的对象
+- 创建后需要使用 `return` 语句返回该对象
+
+#### 缺点
+
+- 无法识别对象
+
+#### Example
+
+```js
+function createPerson(name, age, job) {
+  var person = new Object;
+  person.name = name;
+  person.age = age;
+  person.job = job;
+  person.sayName = function () {
+    console.log(this.name);
+  }
+  return person;
+}
+
+var yy = createPerson('yy', 21, 'coder');
+console.log(yy); // { name: 'yy', age: 21, job: 'coder', sayName: [Function] }
+```
+
+### 构造函数模式
+
+> 创建特定类型的对象
+
+- 没有显示的创建对象
+- 直接将属性和方法赋值给 `this` 对象
+- 没有 `return` 语句
+- 构造函数的函数名首字母应该使用大写
+- 创建实例时使用 `new` 操作符
+
+#### 缺点
+
+- 不同实例上的同名函数是不相等的，导致不同的作用域链和标识符解析
+
+#### Example
+
+```js
+function Person (name, age, job) {
+  this.name = name;
+  this.age = age;
+  this.job = job;
+  this.sayName = function () {
+    console.log(this.name);
+  }
+}
+
+var yy = new Person('yy', 21, 'coder');
+console.log(yy); // { name: 'yy', age: 21, job: 'coder', sayName: [Function] }
+```
+
+
+
 <table>
   <tr>
     <th colspan="3">对象属性类型</th>
