@@ -1,3 +1,27 @@
+# TypeScript
+
+TypeScript 是 JavaScript 的 **超集**
+
+TypeScript 是 **静态类型检查** 的 **弱类型**
+
+## 安装
+
+### for Mac
+
+打开终端
+
+```
+$ npm install -g typescript
+```
+
+## 编译
+
+打开终端
+
+```
+tsc <file-name.ts>
+```
+
 ## 基础类型
 
 ### 布尔值

@@ -10,6 +10,11 @@
 # 初始化 package.json 文件
 $ npm init
 
+# 以默认模版创建 package.json 文件
+$ npm init -y
+or
+$ npm int --yes
+
 # 在 npm 资源库中注册用户（使用邮箱注册）
 $ npm adduser
 ```
