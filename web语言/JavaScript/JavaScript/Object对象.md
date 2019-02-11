@@ -199,7 +199,7 @@ Object.prototype
 
 > 是一个指针，指向该实例的原型对象。
 
-> es5 规定这个指针叫做 `[[Prototype]]` ,在浏览器中使用 `__Proto_` 属性访问
+> es5 规定这个指针叫做 `[[Prototype]]` ,在浏览器中使用 `__Proto_` 属性访问，一个实例的`__proto__`
 
 Object.prototype.constructor
 
