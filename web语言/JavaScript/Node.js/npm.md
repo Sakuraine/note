@@ -43,7 +43,7 @@ $ cnpm isntall <ModuleName>
 
 ```
 
-### 安装权限 for Mact
+### 安装权限 for Mac
 
 ```
 # 修改npm包所安装目录的权限
@@ -183,4 +183,3 @@ $ curl -L https://www.npmjs.org/install.sh | sh
 
 
 ## 发布npm包
-
