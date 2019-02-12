@@ -25,10 +25,10 @@ $ npm adduser
 
 ```
 # 全局安装 // 本机上的所有工程下都可以直接使用
-$ npm install <ModuleName>
+$ npm install -g <ModuleName>
 
 # 本地安装 // 只安装在此目录下
-$ npm install <ModuleName> -g
+$ npm install <ModuleName>
 
 # 本地安装的同时，将信息写入 package.json 中
 npm install <ModuleName> --save
@@ -41,6 +41,13 @@ $ npm install -g cnpm --registry=https://registry.npm.taobao.org
 # 使用 cnpm 安装模块
 $ cnpm isntall <ModuleName>
 
+```
+
+### 安装权限 for Mac
+
+```
+# 修改npm包所安装目录的权限
+$ sudo chown -R $USER /usr/local
 ```
 
 
@@ -64,7 +71,13 @@ $ npm cache clear
 
 ```
 # 卸载全局安装
-$ npm uninstall <ModuleName> -g
+$ npm uninstall -g <ModuleName>
+
+# 卸载本地安装
+$ npm uninstall <ModuleName>
+
+# 卸载本地安装，且从 package.json 文件中删除
+$ npm uninstall --save <ModuleName>
 ```
 
 
@@ -72,19 +85,20 @@ $ npm uninstall <ModuleName> -g
 ## 查看
 
 ```
+# 查看全局包位置
+$ npm root -g
+
 # 查看所有命令
 $ npm help
 
 # 查看命令的详细说明
 $ npm help <command>
 
-# 查看全局安装的模块
-$ npm list -g
+# 查看全局安装的模块 // depth 显示依赖层级，不设置则默认全部展开
+$ npm list -g --depth=0
 
 # 查看
 $ npm list grunt
-
-$ npm list --depth=0 -global
 ```
 
 
@@ -140,31 +154,32 @@ main - main 字段指定了程序的主入口文件，require('moduleName') 就�
 
 ```
 
+## npm包管理工具
 
+### [ndm](https://github.com/720kb/ndm)
 
+> 查看和管理全局和本地包
 
+## 其他
 
+### 如果npm损坏了
 
-
-****
-
-
-
-查看全局安装的依赖
-
-```
-npm list --depth=0 -global
-```
-
-卸载全局安装的依赖
+#### for Mac
 
 ```
-npm uninstall -g 依赖包名称
+$ curl -L https://www.npmjs.org/install.sh | sh
 ```
 
-更新全局安装的所有依赖
+#### for Windows
 
-```
-npm updata -g
-```
+去官网重新下载
 
+
+
+# 高级
+
+## 创建node.js模块
+
+
+
+## 发布npm包

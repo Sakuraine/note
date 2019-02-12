@@ -123,7 +123,7 @@ console.log(yy); // { name: 'yy', age: 21, job: 'coder', sayName: [Function] }
 
 > 定义和用法
 
-修改属性默认的特性
+修改属性默认的特性。
 
 > 参数
 
@@ -141,7 +141,7 @@ console.log(yy); // { name: 'yy', age: 21, job: 'coder', sayName: [Function] }
 
 > 返回值
 
-被传递给函数的对象
+被传递给函数的对象。
 
 
 
@@ -149,7 +149,7 @@ console.log(yy); // { name: 'yy', age: 21, job: 'coder', sayName: [Function] }
 
 > 定义和用法
 
-修改属性默认的特性
+修改属性默认的特性。
 
 > 参数
 
@@ -167,7 +167,7 @@ console.log(yy); // { name: 'yy', age: 21, job: 'coder', sayName: [Function] }
 
 > 返回值
 
-被传递给函数的对象
+被传递给函数的对象。
 
 
 
@@ -175,13 +175,13 @@ console.log(yy); // { name: 'yy', age: 21, job: 'coder', sayName: [Function] }
 
 > 定义和用法
 
-读取属性默认的特性
+读取属性默认的特性。
 
 > 参数
 
 `obj`
 
-需要查找的目标对象
+需要查找的目标对象。
 
 `prop`
 
@@ -193,13 +193,49 @@ console.log(yy); // { name: 'yy', age: 21, job: 'coder', sayName: [Function] }
 
 
 
+##### Object.keys(obj)
+
+> 定义和用法
+
+返回一个由一个给定对象的自身可枚举属性组成的数组，数组中属性名的排列顺序和使用 [`for...in`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环遍历该对象时返回的顺序一致。
+
+> 参数
+
+`obj`
+
+要返回其枚举自身属性的对象。
+
+> 返回值
+
+一个表示给定对象的所有可枚举属性的字符串数组。
+
+
+
+##### Object.getOwnPropertyNames(obj)
+
+> 定义和用法
+
+返回一个由指定对象的所有自身属性的属性名（包括不可枚举属性但不包括Symbol值作为名称的属性）组成的数组。
+
+> 参数
+
+`obj`
+
+一个对象，其自身的可枚举和不可枚举属性的名称被返回。
+
+> 返回值
+
+在给定对象上找到的自身属性对应的字符串数组。
+
+
+
 ## 原型
 
 Object.prototype
 
 > 是一个指针，指向该实例的原型对象。
 
-> es5 规定这个指针叫做 `[[Prototype]]` ,在浏览器中使用 `__Proto_` 属性访问
+> es5 规定这个指针叫做 `[[Prototype]]` ,在浏览器中使用 `__Proto_` 属性访问，一个实例的`__proto__`
 
 Object.prototype.constructor
 
