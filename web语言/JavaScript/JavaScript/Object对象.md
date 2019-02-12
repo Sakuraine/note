@@ -2,7 +2,7 @@
 
 ## 创建对象的模式
 
-### 工厂模式
+### 1.工厂模式
 
 > 工厂模式虽然解决了创建多个相似对象的问题，但却没有解决对象识别的问题(即怎样知道一个对象的类型)
 
@@ -31,7 +31,9 @@ var yy = createPerson('yy', 21, 'coder');
 console.log(yy); // { name: 'yy', age: 21, job: 'coder', sayName: [Function] }
 ```
 
-### 构造函数模式
+
+
+### 2.构造函数模式
 
 > 创建特定类型的对象
 
@@ -60,6 +62,92 @@ function Person (name, age, job) {
 var yy = new Person('yy', 21, 'coder');
 console.log(yy); // { name: 'yy', age: 21, job: 'coder', sayName: [Function] }
 ```
+
+
+
+### 3.原型模式
+
+> 通过将属性和方法添加到原型对象上，使所有实例共享方法属性
+
+- 所有对象实例都共享它包含的属性和方法
+
+#### 缺点
+
+- 创建的实例都会有相同的属性值
+- 当改变一个实例的属性值时，其他的实例所对应的属性值也会改变
+
+#### Example
+
+```js
+function Person() {
+}
+
+Person.prototype = {
+  constructor: Person,
+  name: 'yy',
+  age: '21',
+  sayName: function () {
+    console.log(this.name);
+  }
+}
+
+var person = new Person();
+```
+
+
+
+### 4.组合使用构造函数模式和原型模式
+
+> 使用构造函数模式定义实例属性，使用原型模式定义方法和共享的属性
+
+**这种构造函数模和原型混成的模式，是目前在ECMAScript中使用最广泛、认同度最高的的一种创建自定义类型的方法，可以说，这是用来定义引用类型的一种默认模式**
+
+- 每个实例都会有自己的一份实例属性的副本
+- 共享对方法的引用，最大限度地节省内存
+
+#### 缺点
+
+- 代码量太多，ES6增加了class类代替
+
+#### Example
+
+```js
+function Person(name, age, job) {
+  this.name = name;
+  this.age = age;
+  this.job = job;
+  this.friends = ['Bob'];
+}
+
+Person.prototype = {
+  constructor: Person,
+  sayName = function () {
+    console.log(this.name);
+  }
+}
+
+var person1 = new Person('yy', 18, 'Doctor');
+var person2 = new Person('zz', 29, 'Coder');
+
+person1.friends.push('Van');
+console.log(person1.friends); // 'Bob, Van'
+console.log(person2.friends); // 'Bob'
+console.log(person1.sayName === person2.sayName); // ture
+```
+
+
+
+### 5.动态原型模式
+
+> 
+
+
+
+### 6.寄生构造函数模式
+
+
+
+### 7.稳妥构造函数模式
 
 
 
