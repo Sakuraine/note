@@ -16,9 +16,9 @@ command + space 打开聚焦搜索；
 
 ## 安装
 
-## 安装指定的包
+##### 安装指定的包
 
-```
+```shell
 $ brew install <packageName>
 ```
 
@@ -26,21 +26,21 @@ $ brew install <packageName>
 
 ## 更新
 
-### 更新 Homebrew
+##### 更新 Homebrew
 
-```
+```shell
 $ brew update
 ```
 
-### 更新所有可以更新的包
+##### 更新所有可以更新的包
 
-```
+```shell
 $ brew upgrade
 ```
 
-### 更新指定的包
+##### 更新指定的包
 
-```
+```shell
 $ brew upgrade <packageName>
 ```
 
@@ -48,21 +48,21 @@ $ brew upgrade <packageName>
 
 ## 卸载
 
-### 卸载指定的包
+##### 卸载指定的包
 
-```
+```shell
 $ brew uninstall <packageName>
 ```
 
-### 卸载所有旧版本
+##### 卸载所有旧版本
 
-```
+```shell
 $ brew cleanup
 ```
 
-### 卸载指定版本
+##### 卸载指定版本
 
-```
+```shell
 $ brew cleanup <packageName>
 ```
 
@@ -70,27 +70,27 @@ $ brew cleanup <packageName>
 
 ## 查看
 
-### 查看已安装包列表
+##### 查看已安装包列表
 
-```
+```shell
 $ brew list
 ```
 
-### 查看包信息
+##### 查看包信息
 
-```
+```shell
 $ brew info <packageName>
 ```
 
-### 查看可以更新的包的
+##### 查看可以更新的包的
 
-```
+```shell
 $ brew outdated
 ```
 
-### 查看可以清理的旧版本
+##### 查看可以清理的旧版本
 
-```
+```shell
 $ brew cleanup -n
 ```
 
@@ -98,9 +98,9 @@ $ brew cleanup -n
 
 ## 搜索
 
-### 搜索指定的版本
+##### 搜索指定的版本
 
-```
-brew search <packageName>
+```shell
+$ brew search <packageName>
 ```
 
