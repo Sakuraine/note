@@ -25,13 +25,13 @@ $ npm adduser
 
 ```
 # 全局安装 // 本机上的所有工程下都可以直接使用
-$ npm install -g <ModuleName>
+$ npm install -g <moduleName>
 
 # 本地安装 // 只安装在此目录下
-$ npm install <ModuleName>
+$ npm install <moduleName>
 
 # 本地安装的同时，将信息写入 package.json 中
-npm install <ModuleName> --save
+npm install <moduleName> --save
 
 ===========================================
 # 使用淘宝 npm 镜像
@@ -39,7 +39,7 @@ npm install <ModuleName> --save
 $ npm install -g cnpm --registry=https://registry.npm.taobao.org
 
 # 使用 cnpm 安装模块
-$ cnpm isntall <ModuleName>
+$ cnpm isntall <moduleName>
 
 ```
 
@@ -56,10 +56,10 @@ $ sudo chown -R $USER /usr/local
 
 ```
 # 更新当前目录下 node_modules 子目录里对应模块到最新版本
-$ npm update <ModuleName>
+$ npm update <moduleName>
 
 # 更新全局安装的模块到最新版本
-$ npm update <ModuleName> -g
+$ npm update <moduleName> -g
 
 # 清空 npm 本地缓存，用于对付使用相同版本号发布新版本代码的人
 $ npm cache clear
@@ -71,13 +71,13 @@ $ npm cache clear
 
 ```
 # 卸载全局安装
-$ npm uninstall -g <ModuleName>
+$ npm uninstall -g <moduleName>
 
 # 卸载本地安装
-$ npm uninstall <ModuleName>
+$ npm uninstall <moduleName>
 
 # 卸载本地安装，且从 package.json 文件中删除
-$ npm uninstall --save <ModuleName>
+$ npm uninstall --save <moduleName>
 ```
 
 
@@ -110,7 +110,7 @@ $ npm list grunt
 $ npm publish
 
 # 撤销发布过的某个版本代码
-$ npm unpublish <ModuleName>@<version>
+$ npm unpublish <moduleName>@<version>
 ```
 
 
