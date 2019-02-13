@@ -31,8 +31,8 @@
 
   语法
 
-  ```
-  cd [directory]
+  ```shell
+  $ cd [directory]
   ```
 
 - pwd 命令
@@ -41,8 +41,8 @@
 
   语法
 
-  ```
-  pwd
+  ```shell
+  $ pwd
   ```
 
 - mkdir 命令
@@ -51,8 +51,8 @@
 
   语法
 
-  ```
-  mkdir [参数] dirname
+  ```shell
+  $ mkdir [参数] dirname
   ```
 
   参数
@@ -68,6 +68,6 @@
 
   语法
 
-  ```
-  touch file1 file2 ...
+  ```shell
+  $ touch file1 file2 ...
   ```

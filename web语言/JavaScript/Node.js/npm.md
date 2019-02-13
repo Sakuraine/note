@@ -4,9 +4,17 @@
 
 # 起步
 
+## 安装
+
+```shell
+$ npm install npm@latest -g
+```
+
+
+
 ## 创建
 
-```
+```shell
 # 初始化 package.json 文件
 $ npm init
 
@@ -23,7 +31,7 @@ $ npm adduser
 
 ## 安装模块
 
-```
+```shell
 # 全局安装 // 本机上的所有工程下都可以直接使用
 $ npm install -g <moduleName>
 
@@ -45,7 +53,7 @@ $ cnpm isntall <moduleName>
 
 ### 安装权限 for Mac
 
-```
+```shell
 # 修改npm包所安装目录的权限
 $ sudo chown -R $USER /usr/local
 ```
@@ -54,7 +62,7 @@ $ sudo chown -R $USER /usr/local
 
 ## 更新
 
-```
+```shell
 # 更新当前目录下 node_modules 子目录里对应模块到最新版本
 $ npm update <moduleName>
 
@@ -69,7 +77,7 @@ $ npm cache clear
 
 ## 卸载
 
-```
+```shell
 # 卸载全局安装
 $ npm uninstall -g <moduleName>
 
@@ -84,7 +92,7 @@ $ npm uninstall --save <moduleName>
 
 ## 查看
 
-```
+```shell
 # 查看全局包位置
 $ npm root -g
 
@@ -105,7 +113,7 @@ $ npm list grunt
 
 ## 版本
 
-```
+```shell
 # 发布模块
 $ npm publish
 
@@ -115,7 +123,7 @@ $ npm unpublish <moduleName>@<version>
 
 
 
-package.json 属性说明
+> package.json 属性说明
 
 ```json
 {
@@ -154,6 +162,8 @@ main - main 字段指定了程序的主入口文件，require('moduleName') 就�
 
 ```
 
+
+
 ## npm包管理工具
 
 ### [ndm](https://github.com/720kb/ndm)
@@ -166,7 +176,7 @@ main - main 字段指定了程序的主入口文件，require('moduleName') 就�
 
 #### for Mac
 
-```
+```shell
 $ curl -L https://www.npmjs.org/install.sh | sh
 ```
 

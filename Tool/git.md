@@ -15,121 +15,121 @@
 ### 查看
 - 查看git版本
 
-  ```
+  ```shell
   $ git --version
   ```
 
 - 查看公钥
 
-  ```
+  ```shell
   $ cat ~/.ssh/id_rsa.pub
   ```
 
 - 查看所有远程主机
 
-  ```
+  ```shell
   $ git remote
   ```
 
 - 查看所有远程主机地址
 
-  ```
+  ```shell
   $ git remote -v
   ```
 
 - 查看当前状态
 
-  ```
+  ```shell
   $ git status
   ```
 
 - 查看当前分支
 
-  ```
+  ```shell
   $ git branch
   ```
 
 - 查看本地已经同步的远程分支
 
-  ```
+  ```shell
   $ git branch -r
   ```
 
 - 查看所有分支
 
-  ```
+  ```shell
   $ git branch -a
   ```
 
 - 对比本地和远程
 
-  ```
+  ```shell
   $ git diff master origin/master
   ```
 
 - 显示出所有有差异的文件列表
 
-  ```
+  ```shell
   $ git diff <branch1> <branch2> --stat
   ```
 
 - 显示指定文件的详细差异
 
-  ```
+  ```shell
   $ git diff <branch1> <branch2> 文件名(带路径)
   ```
 
 - 显示出所有有差异的文件的详细差异
 
-  ```
+  ```shell
   $ git diff <branch1> <branch2>
   ```
 
 - 查看日志
 
-  ```
+  ```shell
   $ git log
   ```
 
 - 查看当前分支合并记录
 
-  ```
+  ```shell
   $ git log --graph
   ```
 
 - 查看所有版本（包括被回滚的版本）
 
-  ```
+  ```shell
   $ git log --reflog
   ```
 
 - 查看dev分支有，master分支中没有的
 
-  ```
+  ```shell
   $ git log <dev> ^<master>
   ```
 
 - 查看master分支有，dev分支中没有的
 
-  ```
+  ```shell
   $ git log <master> ^<dev>
   ```
 
 - 查看最近一次合并的详细信息
 
-  ```
+  ```shell
   $ git show
   ```
 
 - 查看指定commit hashID的所有修改
 
-  ```
+  ```shell
   $ git show <commitid>
   ```
 
 - 查看所有输入过的命令记录
 
-  ```
+  ```shell
   $ git reflog
   ```
 
@@ -139,19 +139,19 @@
 
 - 生成ssh公钥，会在该目录下生成一个ssh文件
 
-  ```
+  ```shell
   $ ssh-keygen -t rsa -C '我的邮箱@163.com'
   ```
 
 - 进入ssh文件
 
-  ```
+  ```shell
   $ cd .ssh/
   ```
 
 - 查看ssh文件的钥，id_rsa为私钥，id_rsa.pub为公钥
 
-  ```
+  ```shell
   $ ls -al
   ```
 
@@ -161,19 +161,19 @@
 
 - 下载项目到该文件夹，输入yes
 
-  ```
+  ```shell
   $ git clone 复制的ssh地址
   ```
 
 - 进入项目目录
 
-  ```
+  ```shell
   $ cd 项目文件名
   ```
 
 - 创建 gitignore文件，用来设置需要忽略项目里不需要的文件
 
-  ```
+  ```shell
   $ vim .gitignore
   ```
 
@@ -183,21 +183,21 @@
 
 - 需要输入账号密码pull代码前输入
 
-  ```
+  ```shell
   $ git config --system --unset credential.helper
   ```
 
 - 下载远程git仓库代码
 
-  ```
-  $ git clone 'git仓库地址' 
+  ```shell
+  $ git clone 'git仓库地址'
   ```
 
 - 输入git邮箱账号密码开始下载
 
 - 更新本地代码到最新
 
-  ```
+  ```shell
   $ git pull
   ```
 
@@ -210,27 +210,27 @@
 
 1. 创建分支同时切换到该分支
 
-   ```
+   ```shell
    $ git checkout -b <dev>
    ```
 
 2. 先创建分支再切换到该分支
     1. 创建新的分支
 
-       ```
+       ```shell
        $ git branch <dev>
        ```
 
     2. 切换到该分支
 
-       ```
+       ```shell
        $ git checkout <dev>
        ```
 
 #### 关联本地分支和远程分支
 > 关联后可以直接`git pull`不需要加远程分支名
 
-```
+```shell
 $ git branch --set-upstream-to=origin/dev  dev
 ```
 
@@ -239,30 +239,30 @@ $ git branch --set-upstream-to=origin/dev  dev
 
   - 添加全部文件
 
-    ```
+    ```shell
     $ git add .
     ```
   - 添加更新过的文件
 
-    ```
+    ```shell
     $ git add -u
     ```
 
   - 添加单个文件
 
-    ```
+    ```shell
     $ git add 文件路径
     ```
 
 2. 提交到本地分支
 
-   ```
+   ```shell
    $ git  commit -m '提交备注'
    ```
 
 3. 推送本地分支到远程仓库
 
-   ```
+   ```shell
    $ git push origin <分支名>
    ```
 
@@ -272,19 +272,19 @@ $ git branch --set-upstream-to=origin/dev  dev
 
 - 切换到主分支
 
-  ```
+  ```shell
   $ git checkout master
   ```
 
 - 拉取主分支最新代码
 
-  ```
+  ```shell
   $ git pull
   ```
 
 - 合并分支到主分支
 
-  ```
+  ```shell
   $ git merge <分支名>
   ```
 
@@ -292,25 +292,25 @@ $ git branch --set-upstream-to=origin/dev  dev
 
 - 切换到主分支
 
-  ```
+  ```shell
   $ git checkout master
   ```
 
 - 拉取主分支最新代码
 
-  ```
+  ```shell
   $ git pull
   ```
 
 - 切换到分支
 
-  ```
+  ```shell
   $ git checkout <分支名>
   ```
 
 - 合并主分支最新到分支
 
-  ```
+  ```shell
   $ git merge master
   ```
 
@@ -318,7 +318,7 @@ $ git branch --set-upstream-to=origin/dev  dev
 
 > 
 
-```
+```shell
 $ git merge --no-ff
 ```
 
@@ -326,7 +326,7 @@ $ git merge --no-ff
 
 > 
 
-```
+```shell
 $ git merge --squash
 ```
 
@@ -336,13 +336,13 @@ $ git merge --squash
 
 - 删除本地分支
 
-  ```
+  ```shell
   $ git branch -d
   ```
 
 - 删除远程分支
 
-  ```
+  ```shell
   $ git push origin --delete <分支名>
   ```
 
@@ -350,9 +350,9 @@ $ git merge --squash
 
 ##### 查看状态
 
-```
+  ```shell
 $ git status
-```
+  ```
 
 ##### 解决冲突
 
@@ -360,15 +360,15 @@ $ git status
 
   > 正常提交
 
-  ```
+  ```shell
   $ git add .
   ```
 
-  ```
+  ```shell
   $ git commit -m 'description'
   ```
 
-  ```
+  ```shell
   $ git push origin yourBranchName
   ```
 
@@ -379,11 +379,11 @@ $ git status
 
     - 切换到目标分支拉去自己分支（不推荐）
 
-      ```
+      ```shell
       $ git checkout master
       ```
 
-      ```
+      ```shell
       $ git merge yourBranchName
       ```
 
@@ -391,23 +391,23 @@ $ git status
 
     - 先切换到目标分支拉去远端最新（切换前切记提交自己分支代码）
 
-      ```
+      ```shell
       $ git checkout master
       ```
 
-      ```
+      ```shell
       $ git pull
       ```
 
     - 回到自己分支
 
-      ```
+      ```shell
       $ git checkout yourBranchName
       ```
 
     - 将目标分支合并到自己分支（此时提示有冲突）
 
-      ```
+      ```shell
       $ git merge master
       ```
 
@@ -427,15 +427,15 @@ $ git status
 
     - 再次提交
 
-      ```
+      ```shell
       $ git add .
       ```
 
-      ```
+      ```shell
       $ git commit -m 'merge'
       ```
 
-      ```
+      ```shell
       $ git push origin yourBranchName
       ```
 
@@ -445,31 +445,31 @@ $ git status
 
 > 回滚到最近一次的提交前
 
-```
+  ```shell
 $ git reset --hard HEAD^
-```
+  ```
 
 > 取消回滚/回滚到指定版本
 
-```
+  ```shell
 $ git reset --hard commit_id // 上一次提交的commit_id，甚至任何一次提交的commit_id
-```
+  ```
 
 
 
 #### 更换仓库名称
 
-```
+  ```shell
 $ git branch -m old_branch new_branch
-```
+  ```
 
-```
+  ```shell
 $ git push origin :old_branch
-```
+  ```
 
-```
+  ```shell
 $ git push --set-upstream origin new_branch
-```
+  ```
 
 
 
@@ -481,7 +481,7 @@ $ git push --set-upstream origin new_branch
 
 - 告诉Git，以后`st`表示`status`：
 
-  ```
+  ```shell
   $ git config --global alias.st status // --global 全局所有仓库都适用
   ```
 

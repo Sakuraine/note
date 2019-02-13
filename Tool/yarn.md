@@ -8,64 +8,64 @@
 
 ##### 通过 Homebrew 安装
 
-```
-$ 安装
-# brew install yarn
+```shell
+# 安装
+$ brew install yarn
 
-$ 升级
-# brew upgrade yarn
+# 升级
+$ brew upgrade yarn
 ```
 
 ##### 通过 MacPorts 安装
 
-```
-# sudo port install yarn
+```shell
+$ sudo port install yarn
 ```
 
 查看yarn版本
 
-```
-# yarn --version
+```shell
+$ yarn --version
 ```
 
 ### Windows
 
 ##### 通过 Chocolatey 安装
 
-```
-# choco install yarn
+```shell
+$ choco install yarn
 ```
 
 
 
 ##### 使用
 
-```
-$ 初始化
-# yarn init
+```shell
+# 初始化
+$ yarn init
 
-$ 添加依赖包
-# yarn add [package]
-# yarn add [package]@[version]
-# yarn add [package]@[tag]
+# 添加依赖包
+$ yarn add [package]
+$ yarn add [package]@[version]
+$ yarn add [package]@[tag]
 
-$ 将依赖项添加到不同依赖项类别中
+# 将依赖项添加到不同依赖项类别中
   分别添加到 devDependencies、peerDependencies 和 optionalDependencies 类别中：
-# yarn add [package] --dev
-# yarn add [package] --peer
-# yarn add [package] --optional
+$ yarn add [package] --dev
+$ yarn add [package] --peer
+$ yarn add [package] --optional
 
-$ 升级依赖包
-# yarn upgrade [package]
-# yarn upgrade [package]@[version]
-# yarn upgrade [package]@[tag]
+# 升级依赖包
+$ yarn upgrade [package]
+$ yarn upgrade [package]@[version]
+$ yarn upgrade [package]@[tag]
 
-$ 移除依赖包
-# yarn remove [package]
+# 移除依赖包
+$ yarn remove [package]
 
-$ 安装项目的全部依赖
-# yarn
+# 安装项目的全部依赖
+$ yarn
 or
-# yarn install
+$ yarn install
 ```
 
