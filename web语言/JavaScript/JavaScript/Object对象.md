@@ -139,17 +139,70 @@ console.log(person1.sayName === person2.sayName); // ture
 
 ### 5.动态原型模式
 
-> 
+> 有其他OO语言经验的开发人员在看到独立的构造函数和原型时，很可能会感到非常困惑。动态原型模式正式致力于解决这个问题的一个方案。
+
+- 只有初次调用构造函数时才会创建方法
+- 不能使用字面量重写原型，否则会切断实例与新原型之间的联系
+
+#### Example
+
+```js
+function Person(name, age, job) {
+  // 属性
+  this.name = name;
+  this.age = age;
+  this.job = job;
+  
+  // 方法
+  if (typeof this.sayName != 'function'){ // 也可以用 instanceof 操作符判断
+    Person.prototype.sayName = function () {
+      console.log(this.name);
+    }
+  }
+}
+
+var friend = new Person('Nicholas', 29, 'Softtware Engineer');
+friend.sayName();
+```
 
 
 
 ### 6.寄生构造函数模式
 
+> 使用new操作符创建的工厂模式
+
+#### 缺点
+
+- 返回的对象与构造函数的原型属性没有关系，不要过分依赖 instanceof 操作符来确定对象类型
+
+#### Example
+
+```js
+function Person(name, age, job) {
+  var person = new Object;
+  person.name = name;
+  person.age = age;
+  person.job = job;
+  person.sayName = function () {
+    console.log(this.name);
+  }
+  return person;
+}
+
+var yy = new Person('Nicholas', 29, 'Softtware Engineer');
+```
+
 
 
 ### 7.稳妥构造函数模式
 
+**稳妥对象：**没有公共属性，其方法也不引用 this 的对象。稳妥对象适合在一些安全的环境中（这些环境中会禁止使用 this 和 new），或者在防止数据被其他应用程序（如Mashup程序）改动时使用
 
+
+
+## API
+
+### attribute
 
 <table>
   <tr>
@@ -207,7 +260,47 @@ console.log(person1.sayName === person2.sayName); // ture
     <td>undefined</td>
   </tr>
 </table>
-##### Object.defineProperty(obj, prop, descriptor)
+### method
+
+#### Object constructor
+
+##### `Object.assign(target, ...sources)`
+
+> 定义和用法
+
+用于将所有可枚举属性的值从一个或多个源对象复制到目标对象。它将返回目标对象。
+
+> 参数
+
+`target`
+
+目标对象。
+
+`sources`
+
+源对象。
+
+> 返回值
+
+目标对象。
+
+> Example
+
+```js
+const obj = { a: 1 };
+const copy = Object.assign({}, obj);
+console.log(copy); // { a: 1 }    
+```
+
+
+
+##### `Object.create()`
+
+使用指定的原型对象和属性创建一个新对象。
+
+
+
+##### `Object.defineProperty(obj, prop, descriptor)`
 
 > 定义和用法
 
@@ -233,7 +326,7 @@ console.log(person1.sayName === person2.sayName); // ture
 
 
 
-##### Object.defineProperties(obj, 'name', {})
+##### `Object.defineProperties(obj, prop, descriptor)`
 
 > 定义和用法
 
@@ -259,7 +352,51 @@ console.log(person1.sayName === person2.sayName); // ture
 
 
 
-##### Object.getOwnPropertyDescriptor(obj, prop)
+##### `Object.entries(obj)`
+
+> 定义和用法
+
+返回一个对象自身可枚举属性的键值对数组，其排列与使用 [`for...in`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环遍历该对象时返回的顺序一致
+
+> 参数
+
+`obj`
+
+可以返回其可枚举属性的键值对的对象，也可以是数组。
+
+> 返回值
+
+给定对象自身可枚举属性的键值对数组。
+
+> Example
+
+```js
+const obj = { foo: 'bar', baz: 42 };
+console.log(Object.entries(obj)); // [ ['foo', 'bar'], ['baz', 42] ]
+
+const arr = [0, 1, 2];
+console.log(Object.entries(arr)); // [ ['0', 0], ['1', 1], ['2', 2] ]
+```
+
+**将Object转换为Map**
+
+[`new Map()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Map) 构造函数接受一个可迭代的`entries`。借助`Object.entries`方法你可以很容易的将[`Object`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object)转换为[`Map`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Map):
+
+```js
+var obj = { foo: "bar", baz: 42 }; 
+var map = new Map(Object.entries(obj));
+console.log(map); // Map { foo: "bar", baz: 42 }
+```
+
+
+
+##### `Object.freeze()`
+
+冻结对象：其他代码不能删除或更改任何属性。
+
+
+
+##### `Object.getOwnPropertyDescriptor(obj, prop)`
 
 > 定义和用法
 
@@ -281,25 +418,7 @@ console.log(person1.sayName === person2.sayName); // ture
 
 
 
-##### Object.keys(obj)
-
-> 定义和用法
-
-返回一个由一个给定对象的自身可枚举属性组成的数组，数组中属性名的排列顺序和使用 [`for...in`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环遍历该对象时返回的顺序一致。
-
-> 参数
-
-`obj`
-
-要返回其枚举自身属性的对象。
-
-> 返回值
-
-一个表示给定对象的所有可枚举属性的字符串数组。
-
-
-
-##### Object.getOwnPropertyNames(obj)
+##### `Object.getOwnPropertyNames(obj)`
 
 > 定义和用法
 
@@ -317,18 +436,126 @@ console.log(person1.sayName === person2.sayName); // ture
 
 
 
+##### `Object.getOwnPropertySymbols()`
+
+返回一个数组，它包含了指定对象自身所有的符号属性。
+
+
+
+##### `Object.getPrototypeOf()`
+
+返回指定对象的原型对象。
+
+
+
+##### `Object.is()`
+
+比较两个值是否相同。所有 NaN 值都相等（这与`==`和`===`不同）。
+
+
+
+##### `Object.isExtensible()`
+
+判断对象是否可扩展。
+
+
+
+##### `Object.isFrozen()`
+
+判断对象是否已经冻结。
+
+
+
+##### `Object.isSealed()`
+
+判断对象是否已经密封。
+
+
+
+##### `Object.keys(obj)`
+
+> 定义和用法
+
+返回一个由一个给定对象的自身可枚举属性组成的数组，数组中属性名的排列顺序和使用 [`for...in`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环遍历该对象时返回的顺序一致。
+
+> 参数
+
+`obj`
+
+要返回其枚举自身属性的对象。
+
+> 返回值
+
+一个表示给定对象的所有可枚举属性的字符串数组。
+
+> Example
+
+```js
+
+```
+
+
+
+##### `Object.preventExtensions()`
+
+防止对象的任何扩展。
+
+
+
+##### `Object.seal()`
+
+防止其他代码删除对象的属性。
+
+
+
+##### `Object.setPrototypeOf()`
+
+设置对象的原型（即内部[[Prototype]]属性）。
+
+
+
+##### `Object.values(obj)`
+
+> 定义和用法
+
+返回一个对象自身的所有可枚举属性值的数组，值的顺序与使用[`for...in`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in)循环的顺序相同
+
+> 参数
+
+`obj`
+
+被返回可枚举属性值的对象。
+
+> 返回值
+
+一个包含对象自身的所有可枚举属性值的数组。
+
+> Example
+
+```js
+var obj = { foo: 'bar', baz: 42 };
+console.log(Object.values(obj)); // ['bar', 42]
+```
+
+
+
+
+
 ## 原型
 
-Object.prototype
+实例和原型的连接只是一个指针而非副本
+
+`Object.prototype`
 
 > 是一个指针，指向该实例的原型对象。
 
 > es5 规定这个指针叫做 `[[Prototype]]` ,在浏览器中使用 `__Proto_` 属性访问，一个实例的`__proto__`
 
-Object.prototype.constructor
+`Object.prototype.constructor`
 
 > 是原型对象上的一个属性，原型上最初只包含constructor属性
 
-**isPrototypeOf**
+**`isPrototypeOf`**
 
 > 如果[[Prototype]]指向调用 isPrototypeOf() 方法的对象（Object.prototype）,那么这个方法就会返回true
+

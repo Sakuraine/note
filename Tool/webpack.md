@@ -4,20 +4,20 @@
 
 > 安装前请先安装node
 
-### 本地安装
+##### 本地安装
 
 ```
 $ npm install webpack webpack-cli --save-dev
 # webpack-cli用于在命令行运行webpack，webpack v4+需要
 ```
 
-### 全局安装
+##### 全局安装
 
 ```
 $ npm install webpack -g
 ```
 
-### 安装最新版本
+##### 安装最新版本
 
 ```
 $ npm install webpack@beta
