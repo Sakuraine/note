@@ -2,12 +2,21 @@
 
 Hooks*是React v16.7.0-alpha中加入的新特性。它可以让你在class以外使用state和其他React特性。
 
+## useState
+
+## useEffect
+
+
+
 ```jsx
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function Example() {
-  // Declare a new state variable, which we'll call "count"
   const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    document.title = `You clicked ${count} times`;
+  });
 
   return (
     <div>
@@ -31,3 +40,4 @@ function Example() {
 **classes不会被移除**
 
 **Hooks不会影响你对React的理解**
+
