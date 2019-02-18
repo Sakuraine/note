@@ -181,8 +181,8 @@ H --> http
 
 | 名称           | 符号         |
 | -------------- | ------------ |
-| 文件名         | <fileName>   |
-| 模块包、依赖包 | <moduleName>、<packageName> |
+| 文件名         | `<fileName>` |
+| 模块包、依赖包 | `<moduleName>`、`<packageName>` |
 
 
 

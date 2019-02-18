@@ -43,7 +43,7 @@ const config = (function () {
   // 获取多页入口路径
   const pagepath = `${context}/pages`;
   // 读取多页文件名
-  // const dirs = fs.readdirSync(pagepath);
+  // const dirs = fs.readdirSync(pagepath); // 返回文件数组列表
   // 只读取制定文件名
   const dirs = ['outpatient', 'doctorstation', 'login'];
 })
