@@ -477,6 +477,32 @@ $ git push --set-upstream origin new_branch
 
 #### 忽略特殊文件
 
+创建文件 .gitignore
+
+```
+# git上传忽略文件
+# 日志文件
+logs
+*.logs
+
+# Mac系统上存储文件夹信息的
+.DS_Store
+
+# 依赖包
+node_modules/
+
+# 打包文件
+dist
+```
+
+对已经提交过的文件，忽略规则会无效，需要拉取远端最新代码将文件删除后再提交到远端，同时清除git本地缓存
+
+git清除本地缓存命令如下：
+
+```shell
+`git ``rm` `-r --cached .``git add .``git commit -m ``'update .gitignore'`
+```
+
 #### 配置命令缩写
 
 - 告诉Git，以后`st`表示`status`：

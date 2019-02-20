@@ -38,7 +38,7 @@ $ choco install yarn
 
 
 
-##### 使用
+## 使用
 
 ```shell
 # 初始化
