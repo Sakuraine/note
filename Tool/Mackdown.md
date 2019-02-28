@@ -323,4 +323,12 @@ section 项目B
 > 当你看到这里的时候，说明你的md已经可以出山了
 
 GitHub上设置微标：
-https://img.shields.io/badge/{徽标标题}-{徽标内容}-{徽标颜色}.svg
+
+- 在 `https://shields.io/#/` 生成svg图标；
+  svg链接格式：
+  https://img.shields.io/badge/{徽标标题}-{徽标内容}-{徽标颜色}.svg
+
+- 在项目的README.md内引入
+
+  `![image](svg链接)`
+
