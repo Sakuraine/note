@@ -6,7 +6,7 @@
 
 ##### 本地安装
 
-```shell
+```bash
 $ npm install webpack webpack-cli --save-dev
 # webpack-cli用于在命令行运行webpack，webpack v4+需要
 ```
