@@ -392,6 +392,28 @@ hell\u{6F} // 123
 
 
 
+##### `str.repeat(count)`
+
+> 用法
+
+​	构造并返回一个新字符串，该字符串包含被连接在一起的指定数量的字符串的副本。
+
+> 参数
+
+​	conunt | Number
+
+​	介于0和正无穷大之间的整数 : [0, +∞) 。表示在新构造的字符串中重复了多少遍原字符串。
+
+> 返回值
+
+​	 包含指定字符串的指定数量副本的新字符串。
+
+> 注意
+
+​	count不能为负数和 Infinity ，如果是小数，则去尾去整
+
+​	count如果为NaN，则等同于0
+
 ##### `normalize()`
 
 ```js
@@ -400,7 +422,31 @@ hell\u{6F} // 123
 
 
 
-### 字符串模版
+##### `str.padStart(targetLength, str1, str2...)`
+
+> 用法
+
+​	用另一个字符串填充当前字符串(重复，如果需要的话)，以便产生的字符串达到给定的长度。填充从当前字符串的开始(左侧)应用的。
+
+> 参数
+
+​	targetLength | Number
+
+​	当前字符串需要填充到的目标长度。如果这个数值小于当前字符串的长度，则返回当前字符串本身。
+
+​	str1、str2… | String
+
+​	填充字符串。如果字符串太长，使填充后的字符串长度超过了目标长度，则只保留最左侧的部分，其他部分会被截断。此参数的缺省值为 " "。
+
+
+
+##### `Str.matchAll(regexp)`
+
+> 用法
+
+
+
+### 模版字符串
 
 > 语法
 
@@ -410,10 +456,125 @@ ${变量名}
 
 > Example
 
+模板字符串中嵌入变量，需要将变量名写在`${}`之中。
+
 ```js
 const a = 'yy';
-console.log(`my name is ${a}`);
+console.log(`my name is ${a}`); // my name is yy
 ```
+
+大括号内部可以放入任意的 JavaScript 表达式，可以进行运算，以及引用对象属性。
+
+```js
+let x = 1;
+let y = 2;
+
+`${x} + ${y} = ${x + y}`
+// "1 + 2 = 3"
+```
+
+模板字符串之中还能调用函数。
+
+```js
+function fn() {
+  return "Hello World";
+}
+
+`foo ${fn()} bar`
+// foo Hello World bar
+```
+
+如果大括号中的值不是字符串，将按照一般的规则转为字符串。比如，大括号中是一个对象，将默认调用对象的`toString`方法。
+
+```js
+var obj = {};
+`${obj}` // "[object Object]"
+```
+
+如果需要引用模板字符串本身，在需要时执行，可以像下面这样写。
+
+```js
+// 写法一
+let str = 'return ' + '`Hello ${name}!`';
+let func = new Function('name', str);
+func('Jack') // "Hello Jack!"
+
+// 写法二
+let str = '(name) => `Hello ${name}!`';
+let func = eval.call(null, str);
+func('Jack') // "Hello Jack!"
+```
+
+如果在模板字符串中需要使用反引号，则前面要用反斜杠转义。
+
+如果使用模板字符串表示多行字符串，所有的空格和缩进都会被保留在输出之中。
+
+模板字符串甚至还能嵌套。
+
+
+
+#### 标签模板
+
+它可以紧跟在一个函数名后面，该函数将被调用来处理这个模板字符串。这被称为“标签模板”功能（tagged template）。
+
+标签模板其实不是模板，而是函数调用的一种特殊形式。“标签”指的就是函数，紧跟在后面的模板字符串就是它的参数。
+
+```js
+alert`123`
+// 等同于
+alert(123)
+```
+
+如果模板字符里面有变量，会将模板字符串先处理成多个参数，再调用函数。
+
+```js
+let a = 5;
+let b = 10;
+
+tag`Hello ${ a + b } world ${ a * b }`;
+// 等同于
+tag(['Hello ', ' world ', ''], 15, 50);
+```
+
+将各个参数按照原来的位置拼合回去
+
+```js
+let total = 30;
+let msg = passthru`The total is ${total} (${total*1.05} with tax)`;
+
+function passthru(literals) {
+  let result = '';
+  let i = 0;
+
+  while (i < literals.length) {
+    result += literals[i++];
+    if (i < arguments.length) {
+      result += arguments[i];
+    }
+  }
+
+  return result;
+}
+
+msg // "The total is 30 (31.5 with tax)"
+```
+
+`passthru`函数采用 rest 参数的写法如下。
+
+```javascript
+function passthru(literals, ...values) {
+  let output = "";
+  let index;
+  for (index = 0; index < values.length; index++) {
+    output += literals[index] + values[index];
+  }
+
+  output += literals[index]
+  return output;
+}
+```
+
+
 
 ### 函数的扩展
 
