@@ -207,3 +207,7 @@ H --> http
 1. 命令前使用 `$`
 2. 注释前使用`#`
 
+
+
+`In short, the years are long, but it's worth waiting for.`
+
