@@ -513,6 +513,35 @@ git清除本地缓存命令如下：
 
 #### 搭建Git服务器
 
+...
+
+### GitHub 使用技巧
+
+快捷键弹框
+
+```
+Shift + /
+```
+
+
+
+#### 搜索语法
+
+- 按编程语言搜索， xxx language:java
+- 按文件或路径搜索，xxx in:readme
+- 按文件大小搜索，xxx size:>100
+- 按地域搜索， xxx location:chengdu
+- 按是否fork过搜索，xxx fork:true
+- 按照拥有者或者组织搜索，xxx user:yrzx404 或者 xxx org:github
+- 按stars数量搜索，xxx stars:>1000
+- 按主题搜索，xxx topic:java
+
+
+
+
+
+
+
 
 
 
@@ -520,3 +549,6 @@ git清除本地缓存命令如下：
 
 
 git remote prune origin
+
+### 
+
