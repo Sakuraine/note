@@ -67,5 +67,8 @@ $ yarn remove [package]
 $ yarn
 or
 $ yarn install
+
+# 安装全局依赖
+$ yarn global add [package]
 ```
 

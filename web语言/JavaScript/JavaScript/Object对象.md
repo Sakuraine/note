@@ -100,7 +100,7 @@ var person = new Person();
 
 > 使用构造函数模式定义实例属性，使用原型模式定义方法和共享的属性
 
-**这种构造函数模和原型混成的模式，是目前在ECMAScript中使用最广泛、认同度最高的的一种创建自定义类型的方法，可以说，这是用来定义引用类型的一种默认模式**
+​	**这种构造函数模和原型混成的模式，是目前在ECMAScript中使用最广泛、认同度最高的的一种创建自定义类型的方法，可以说，这是用来定义引用类型的一种默认模式**
 
 - 每个实例都会有自己的一份实例属性的副本
 - 共享对方法的引用，最大限度地节省内存
@@ -268,21 +268,21 @@ var yy = new Person('Nicholas', 29, 'Softtware Engineer');
 
 > 定义和用法
 
-用于将所有可枚举属性的值从一个或多个源对象复制到目标对象。它将返回目标对象。
+​	用于将所有可枚举属性的值从一个或多个源对象复制到目标对象。它将返回目标对象。
 
 > 参数
 
-`target`
+​	`target`
 
-目标对象。
+​		目标对象。
 
-`sources`
+​	`sources`
 
-源对象。
+​		源对象。
 
 > 返回值
 
-目标对象。
+​	目标对象。
 
 > Example
 
@@ -304,25 +304,25 @@ console.log(copy); // { a: 1 }
 
 > 定义和用法
 
-修改属性默认的特性。
+​	修改属性默认的特性。
 
 > 参数
 
-`obj`
+​	`obj`
 
-要在其上定义属性的对象。
+​		要在其上定义属性的对象。
 
-`prop`
+​	`prop`
 
-要定义或修改的属性的名称。
+​		要定义或修改的属性的名称。
 
-`descriptor`
+​	`descriptor`
 
-将被定义或修改的属性描述符。
+​		将被定义或修改的属性描述符。
 
 > 返回值
 
-被传递给函数的对象。
+​	被传递给函数的对象。
 
 
 
@@ -330,25 +330,25 @@ console.log(copy); // { a: 1 }
 
 > 定义和用法
 
-修改属性默认的特性。
+​	修改属性默认的特性。
 
 > 参数
 
-`obj`
+​	`obj`
 
-要在其上定义属性的对象。
+​		要在其上定义属性的对象。
 
-`prop`
+​	`prop`
 
-要定义或修改的属性的名称。
+​		要定义或修改的属性的名称。
 
-`descriptor`
+​	`descriptor`
 
-将被定义或修改的属性描述符。
+​		将被定义或修改的属性描述符。
 
 > 返回值
 
-被传递给函数的对象。
+​	被传递给函数的对象。
 
 
 
@@ -356,17 +356,17 @@ console.log(copy); // { a: 1 }
 
 > 定义和用法
 
-返回一个对象自身可枚举属性的键值对数组，其排列与使用 [`for...in`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环遍历该对象时返回的顺序一致
+​	返回一个对象自身可枚举属性的键值对数组，其排列与使用 [`for...in`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环遍历该对象时返回的顺序一致
 
 > 参数
 
-`obj`
+​	`obj`
 
-可以返回其可枚举属性的键值对的对象，也可以是数组。
+​		可以返回其可枚举属性的键值对的对象，也可以是数组。
 
 > 返回值
 
-给定对象自身可枚举属性的键值对数组。
+​	给定对象自身可枚举属性的键值对数组。
 
 > Example
 
@@ -400,21 +400,21 @@ console.log(map); // Map { foo: "bar", baz: 42 }
 
 > 定义和用法
 
-读取属性默认的特性。
+​	读取属性默认的特性。
 
 > 参数
 
-`obj`
+​	`obj`
 
-需要查找的目标对象。
+​		需要查找的目标对象。
 
-`prop`
+​	`prop`
 
-目标对象内属性名称（String类型）
+​		目标对象内属性名称（String类型）
 
 > 返回值
 
-如果指定的属性存在于对象上，则返回其属性描述符对象（property descriptor），否则返回 [`undefined`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined)。
+​	如果指定的属性存在于对象上，则返回其属性描述符对象（property descriptor），否则返回 [`undefined`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined)。
 
 
 
@@ -422,17 +422,17 @@ console.log(map); // Map { foo: "bar", baz: 42 }
 
 > 定义和用法
 
-返回一个由指定对象的所有自身属性的属性名（包括不可枚举属性但不包括Symbol值作为名称的属性）组成的数组。
+​	返回一个由指定对象的所有自身属性的属性名（包括不可枚举属性但不包括Symbol值作为名称的属性）组成的数组。
 
 > 参数
 
-`obj`
+​	`obj`
 
-一个对象，其自身的可枚举和不可枚举属性的名称被返回。
+​		一个对象，其自身的可枚举和不可枚举属性的名称被返回。
 
 > 返回值
 
-在给定对象上找到的自身属性对应的字符串数组。
+​	在给定对象上找到的自身属性对应的字符串数组。
 
 
 
@@ -476,17 +476,17 @@ console.log(map); // Map { foo: "bar", baz: 42 }
 
 > 定义和用法
 
-返回一个由一个给定对象的自身可枚举属性组成的数组，数组中属性名的排列顺序和使用 [`for...in`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环遍历该对象时返回的顺序一致。
+​	返回一个由一个给定对象的自身可枚举属性组成的数组，数组中属性名的排列顺序和使用 [`for...in`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环遍历该对象时返回的顺序一致。
 
 > 参数
 
-`obj`
+​	`obj`
 
-要返回其枚举自身属性的对象。
+​		要返回其枚举自身属性的对象。
 
 > 返回值
 
-一个表示给定对象的所有可枚举属性的字符串数组。
+​	一个表示给定对象的所有可枚举属性的字符串数组。
 
 > Example
 
@@ -518,17 +518,17 @@ console.log(map); // Map { foo: "bar", baz: 42 }
 
 > 定义和用法
 
-返回一个对象自身的所有可枚举属性值的数组，值的顺序与使用[`for...in`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in)循环的顺序相同
+​	返回一个对象自身的所有可枚举属性值的数组，值的顺序与使用[`for...in`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in)循环的顺序相同
 
 > 参数
 
-`obj`
+​	`obj`
 
-被返回可枚举属性值的对象。
+​		被返回可枚举属性值的对象。
 
 > 返回值
 
-一个包含对象自身的所有可枚举属性值的数组。
+​	一个包含对象自身的所有可枚举属性值的数组。
 
 > Example
 
