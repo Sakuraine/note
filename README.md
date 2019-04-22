@@ -4,172 +4,141 @@
 
 ### 目录
 
-
 <details>
   <summary>展开查看</summary>
   <pre>
     <code>
-    - Web Language
-    - HTML
-      - ...
-    - CSS
-      - ...
-    - SVG
-      - ...
-    - JavaScript
-      - Javascript基础
-        - Javascript基础
-        - JavaScript原理
-        - Array对象
-        - Data对象
-        - error对象
-        - ...
-      - ES6
-        - Set数据结构
-        - ...
-      - Family
-        - ReactFamily
-          - React
-          - Router
-          - Redux
-          - Ant Design
-          - ...
-        - VueFamily
-          - ...
-        - Component
-          - jQuery
-          - d3
-          - eCharts
-      - TypeScript
-      - NodeJs
-        - node
-        - npm
-  - Net
-    - HTTP
-    - ...
-  - Tool
-    - git
-    - svn
-    - webpack
-    - mackdown/
-    - Linux
-    - subelime
-    - Homebrew
-    - ...
-  - 
-  - Program
-    - DataStructure
-      - ...
-    - DesignPatterns
-      - ...
-  - ...
+├── Web Language
+│   ├── HTML
+│   ├── CSS
+│   └── JavaScript
+│      	├── Javascript
+│       │		├── JavaScript基础
+│       │		├── JavaScript原理
+│       │		├── Object对象
+│       │		├── Array对象
+│       │		├── console
+│       │		├── Data对象
+│       │		├── error对象
+│       │		├── Function
+│       │		├── error对象
+│       │		└── ...
+│      	├── ES6
+│       │		├── class
+│       │		├── Decorator
+│       │		├── Iterator
+│       │		├── Promise
+│       │		├── Set数据结构
+│       │		├── SUMMARY
+│       │		└── ...
+│       └── Frame
+│    		 		├── Component
+│    		 		│		├── d3
+│    		 		│		├── eCharts
+│    		 		│		├── jQuery
+│    		 		│		└── ...
+│    		 		├── Family
+│    		 		│		├── ReactFamily
+│    		 		│		│		├── AntDesign
+│    		 		│		│		├── React
+│    		 		│		│		├── ReactNative
+│    		 		│		│		├── Redux
+│    		 		│		│		└── Router
+│    		 		│		├── VueFamily
+│    		 		│		│		├── Element
+│    		 		│		│		├── Vue
+│    		 		│		│		└── VueX
+│    		 		│		└── ...
+│    		 		└── Node.js
+│    		 		 		├── module
+│    		 		 		├── npm
+│    		 		 		├── node_module
+│    		 		 		│		├── babel
+│    		 		 		│		├── ESLint
+│    		 		 		│		├── webpack
+│    		 		 		│		├── yarn
+│    		 		 		│		└── ...
+│    		 		 		├── Unit Testing Tool
+│    		 		 		└── ...
+├── Net
+│   ├── Ajax
+│   ├── http/https
+│   └── ...
+├── Tool
+│   ├── IDE
+│   │   ├── Atom
+│   │   ├── subelimeText
+│   │   ├── VSCode
+│   │   └── ...
+│   ├── VersionControlTool
+│   │   ├── git
+│   │   └── svn
+│   ├── Homebrew
+│   ├── Linux
+│   ├── Mackdown
+│   └── ...
+└── ...
     </code>
   </pre>
 </details>
 
 
 
+
 ### 结构树状图
 
-```mermaid
-graph LR
-0(Tool)
-1(Program)
-A(web)
-B[HTML]
-C[CSS]
-D[JavaScript]
-H[Net]
+<details>
+  <summary>展开查看</summary>
+  <pre>
+    <code>
+    	```mermaid
+    	graph LR
+    	0(Tool)
+      1(Program)
+      A(web)
+      B[HTML]
+      C[CSS]
+      D[JavaScript]
+      H[Net]
+      storehouse --> git
+      storehouse --> svn
+      iDEA --> VisualStudioCode
+      iDEA --> WebStorm
+      iDEA --> SublimeText
+      iDEA --> Atom
+      iDEA --> HBuilder
+      iDEA --> Dreamweaver
+      A --> B
+      A --> C
+      A --> D
+      A --> H
+      C --> Less
+      C --> Sass
+      D --> JavaScript基础
+      D --> ES6
+      D --> 框架
+      D --> Node.js
+      D --> 前端单元测试
+      ES6 --> let和const
+      ES6 --> Promise对象
+      ES6 --> Set和Map数据类型
+      框架 --> React
+      框架 --> Vue
+      框架 --> Angular
+      框架 --> 其他框架
+      Node.js --> node
+      Node.js --> npm
+      H --> http
+      1 --> DesignPatterns设计模式
+      1 --> DataStructure数据结构
+      ```
+    </code>
+  </pre>
+</details>
 
-0 --> Linux
-0 --> storehouse
-0 --> HomeBrew
-0 --> Mackdown
-0 --> iDEA
-
-storehouse --> git
-storehouse --> svn
-
-iDEA --> VisualStudioCode
-iDEA --> WebStorm
-iDEA --> SublimeText
-iDEA --> Atom
-iDEA --> HBuilder
-iDEA --> Dreamweaver
-
-A --> B
-A --> C
-A --> D
-A --> H
-
-C --> Less
-C --> Sass
-
-D --> JavaScript基础
-D --> ES6
-D --> 框架
-D --> Node.js
-D --> 前端单元测试
-
-ES6 --> let和const
-ES6 --> Promise对象
-ES6 --> Set和Map数据类型
-
-框架 --> React
-框架 --> Vue
-框架 --> Angular
-框架 --> 其他框架
-
-Node.js --> node
-Node.js --> npm
-
-H --> http
-
-1 --> DesignPatterns设计模式
-1 --> DataStructure数据结构
-```
+​    
 
 `任何事情坚持下去，都会有意想不到的收获`
-
-```
-                ii.                                         ;9ABH,
-               SA391,                                    .r9GG35&G
-               &#ii13Gh;                               i3X31i;:,rB1
-               iMs,:,i5895,                         .5G91:,:;:s1:8A
-                33::::,,;5G5,                     ,58Si,,:::,sHX;iH1
-                 Sr.,:;rs13BBX35hh11511h5Shhh5S3GAXS:.,,::,,1AG3i,GG
-                 .G51S511sr;;iiiishS8G89Shsrrsh59S;.,,,,,..5A85Si,h8
-                :SB9s:,............................,,,.,,,SASh53h,1G.
-             .r18S;..,,,,,,,,,,,,,,,,,,,,,,,,,,,,,....,,.1H315199,rX,
-           ;S89s,..,,,,,,,,,,,,,,,,,,,,,,,....,,.......,,,;r1ShS8,;Xi
-         i55s:.........,,,,,,,,,,,,,,,,.,,,......,.....,,....r9&5.:X1
-        59;.....,.     .,,,,,,,,,,,...        .............,..:1;.:&s
-       s8,..;53S5S3s.   .,,,,,,,.,..      i15S5h1:.........,,,..,,:99
-       93.:39s:rSGB@A;  ..,,,,.....    .SG3hhh9G&BGi..,,,,,,,,,,,,.,83
-       G5.G8  9#@@@@@X. .,,,,,,.....  iA9,.S&B###@@Mr...,,,,,,,,..,.;Xh
-       Gs.X8 S@@@@@@@B:..,,,,,,,,,,. rA1 ,A@@@@@@@@@H:........,,,,,,.iX:
-      ;9. ,8A#@@@@@@#5,.,,,,,,,,,... 9A. 8@@@@@@@@@@M;    ....,,,,,,,,S8
-      X3    iS8XAHH8s.,,,,,,,,,,...,..58hH@@@@@@@@@Hs       ...,,,,,,,:Gs
-     r8,        ,,,...,,,,,,,,,,.....  ,h8XABMMHX3r.          .,,,,,,,.rX:
-    :9, .    .:,..,:;;;::,.,,,,,..          .,,.               ..,,,,,,.59
-   .Si      ,:.i8HBMMMMMB&5,....                    .            .,,,,,.sMr
-   SS       :: h@@@@@@@@@@#; .                     ...  .         ..,,,,iM5
-   91  .    ;:.,1&@@@@@@MXs.                            .          .,,:,:&S
-   hS ....  .:;,,,i3MMS1;..,..... .  .     ...                     ..,:,.99
-   ,8; ..... .,:,..,8Ms:;,,,...                                     .,::.83
-    s&: ....  .sS553B@@HX3s;,.    .,;13h.                            .:::&1
-     SXr  .  ...;s3G99XA&X88Shss11155hi.                             ,;:h&,
-      iH8:  . ..   ,;iiii;,::,,,,,.                                 .;irHA
-       ,8X5;   .     .......                                       ,;iihS8Gi
-          1831,                                                 .,;irrrrrs&@
-            ;5A8r.                                            .:;iiiiirrss1H
-              :X@H3s.......                                .,:;iii;iiiiirsrh
-               r#h:;,...,,.. .,,:;;;;;:::,...              .:;;;;;;iiiirrss1
-              ,M8 ..,....,.....,,::::::,,...         .     .,;;;iiiiiirss11h
-              8B;.,,,,,,,.,.....          .           ..   .:;;;;iirrsss111h
-             i@5,:::,,,,,,,,.... .                   . .:::;;;;;irrrss111111
-             9Bi,:,,,,......                        ..r91;;;;;iirrsss1ss1111
-```
 
 ## 笔记规范
 
