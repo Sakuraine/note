@@ -11,55 +11,55 @@
 ├── Web Language
 │   ├── HTML
 │   ├── CSS
-│   └── JavaScript
-│      	├── Javascript
-│       │		├── JavaScript基础
-│       │		├── JavaScript原理
-│       │		├── Object对象
-│       │		├── Array对象
-│       │		├── console
-│       │		├── Data对象
-│       │		├── error对象
-│       │		├── Function
-│       │		├── error对象
-│       │		└── ...
-│      	├── ES6
-│       │		├── class
-│       │		├── Decorator
-│       │		├── Iterator
-│       │		├── Promise
-│       │		├── Set数据结构
-│       │		├── SUMMARY
-│       │		└── ...
+│   └── JavaScript\
+│       ├── Javascript
+│       │   ├── JavaScript基础
+│       │   ├── JavaScript原理
+│       │   ├── Object对象
+│       │   ├── Array对象
+│       │   ├── console
+│       │   ├── Data对象
+│       │   ├── error对象
+│       │   ├── Function
+│       │   ├── error对象
+│       │   └── ...
+│       ├── ES6
+│       │   ├── class
+│       │   ├── Decorator
+│       │   ├── Iterator
+│       │   ├── Promise
+│       │   ├── Set数据结构
+│       │   ├── SUMMARY
+│       │   └── ...
 │       └── Frame
-│    		 		├── Component
-│    		 		│		├── d3
-│    		 		│		├── eCharts
-│    		 		│		├── jQuery
-│    		 		│		└── ...
-│    		 		├── Family
-│    		 		│		├── ReactFamily
-│    		 		│		│		├── AntDesign
-│    		 		│		│		├── React
-│    		 		│		│		├── ReactNative
-│    		 		│		│		├── Redux
-│    		 		│		│		└── Router
-│    		 		│		├── VueFamily
-│    		 		│		│		├── Element
-│    		 		│		│		├── Vue
-│    		 		│		│		└── VueX
-│    		 		│		└── ...
-│    		 		└── Node.js
-│    		 		 		├── module
-│    		 		 		├── npm
-│    		 		 		├── node_module
-│    		 		 		│		├── babel
-│    		 		 		│		├── ESLint
-│    		 		 		│		├── webpack
-│    		 		 		│		├── yarn
-│    		 		 		│		└── ...
-│    		 		 		├── Unit Testing Tool
-│    		 		 		└── ...
+│           ├── Component
+│           │   ├── d3
+│           │   ├── eCharts
+│           │   ├── jQuery
+│           │   └── ...
+│           ├── Family
+│           │   ├── ReactFamily
+│           │   │   ├── AntDesign
+│           │   │   ├── React
+│           │   │   ├── ReactNative
+│           │   │   ├── Redux
+│           │   │   └── Router
+│           │   ├── VueFamily
+│           │   │   ├── Element
+│           │   │   ├── Vue
+│           │   │   └── VueX
+│           │   └── ...
+│           └── Node.js
+│               ├── module
+│               ├── npm
+│               ├── node_module
+│               │   ├── babel
+│               │   ├── ESLint
+│               │   ├── webpack
+│               │   ├── yarn
+│               │   └── ...
+│               ├── Unit Testing Tool
+│               └── ...
 ├── Net
 │   ├── Ajax
 │   ├── http/https
@@ -81,10 +81,6 @@
     </code>
   </pre>
 </details>
-
-
-
-
 ### 结构树状图
 
 <details>
@@ -135,9 +131,6 @@
     </code>
   </pre>
 </details>
-
-​    
-
 `任何事情坚持下去，都会有意想不到的收获`
 
 ## 笔记规范
