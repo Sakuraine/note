@@ -207,6 +207,43 @@ $ curl -L https://www.npmjs.org/install.sh | sh
 | 向后兼容的新功能     | 次要发布 | 增加中间数字并将最后一个数字重置为零         | 1.1.0    |
 | 破坏向后兼容性的更改 | 主要发布 | 增加第一个数字并将中间和最后一个数字重置为零 | 2.0.0    |
 
+### 发布npm包命令
+
+#### 创建自己的npm包
+
+##### npm包结构
+
+```
+-test-wyx
+    -lib
+        -test.js
+    -index.js
+    -package.json
+    -README.md
+```
+
+#### 发布
+
+```shell
+# 创建npm账号 // 也可以直接登录npm官网注册
+$ npm adduser
+
+# 登录npm账号
+$ npm login
+
+# 输入账号、密码、邮箱
+
+# 发布包
+$ npm publish
+```
+
+#### 使用
+
+```shell
+# 在项目内下载包依赖
+$ npm install yourNpmName
+```
+
 
 
 
