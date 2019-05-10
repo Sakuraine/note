@@ -12,3 +12,14 @@
 
 如果页面中包含框架，则每个框架都拥有自己的 window 对象，并且保存在 frames 集合中
 
+## 间歇调用
+
+setTimeout()
+
+clearTimeout()
+
+## 间隔调用
+
+setInterval()
+
+clearInterval()
