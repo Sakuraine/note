@@ -143,7 +143,7 @@
   $ ssh-keygen -t rsa -C '我的邮箱@163.com'
   ```
 
-- 进入ssh文件
+- 进入ssh文件 // Windows和Mac都在用户文件夹下
 
   ```shell
   $ cd .ssh/
