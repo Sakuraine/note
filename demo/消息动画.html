@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>一键下班</title>
+    <style>
+        html,body{margin:0;min-width:320px;}
+        ul{list-style-type:none;margin:0 auto;padding:0;font-size:3vw;user-select: none;}
+        li{display:flex;align-items:center;padding:2% 3%;border-bottom:1px solid #CCC;}
+        .df{display:flex;}
+        .f1{flex:1;}
+        .c3{color:#999;}
+        .tit{font-size:1.2em;}
+        img{width:10%;height:10vw;min-height:32px;margin-right:3%;border-radius:50%;object-fit:cover;}
+        .dot{position:relative;display:inline-block;z-index:2;height:2em;line-height:2em;padding:0 .5em;min-width:2em;font-size:.8em;box-sizing:border-box;border-radius:1em;text-align:center;color:#FFF;background:red;user-select: none;cursor: pointer;}
+        .dot_hide{opacity:0;visibility:hidden;transition:.5s;}
+        canvas{display:none;position:fixed;left:0;top:0;width:100%;height:100%;z-index:1;pointer-events:none;}
+        .locked,
+        .locked>body{height:100%;overflow:hidden;}
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <img src="https://ws1.sinaimg.cn/large/0065oQSqly1g04lsmmadlj31221vowz7.jpg" alt="" />
+            <div class="f1">
+               <div class="df">
+                   <div class="f1 tit">群通知</div>
+                   <div class="c3">上午9：00</div>
+               </div>
+               <div class="df">
+                    <div class="f1 c3">hugeannex 申请加入javascript</div>
+                    <div>
+                        <span class="dot">1</span>
+                    </div>
+               </div>
+            </div>
+        </li>
+        <li>
+            <img src="https://ws1.sinaimg.cn/large/0065oQSqly1g04lsmmadlj31221vowz7.jpg" alt="" />
+            <div class="f1">
+               <div class="df">
+                   <div class="f1 tit">群通知</div>
+                   <div class="c3">上午9：00</div>
+               </div>
+               <div class="df">
+                    <div class="f1 c3">hugeannex 申请加入javascript</div>
+                    <div>
+                        <span class="dot">12</span>
+                    </div>
+               </div>
+            </div>
+        </li>
+        <li>
+            <img src="https://ws1.sinaimg.cn/large/0065oQSqly1g04lsmmadlj31221vowz7.jpg" alt="" />
+            <div class="f1">
+               <div class="df">
+                   <div class="f1 tit">群通知</div>
+                   <div class="c3">上午9：00</div>
+               </div>
+               <div class="df">
+                    <div class="f1 c3">hugeannex 申请加入javascript</div>
+                    <div>
+                        <span class="dot">66</span>
+                    </div>
+               </div>
+            </div>
+        </li>
+        <li>
+                <img src="https://ws1.sinaimg.cn/large/0065oQSqly1g04lsmmadlj31221vowz7.jpg" alt="" />
+                <div class="f1">
+                   <div class="df">
+                       <div class="f1 tit">群通知</div>
+                       <div class="c3">上午9：00</div>
+                   </div>
+                   <div class="df">
+                        <div class="f1 c3">hugeannex 申请加入javascript</div>
+                        <div>
+                            <span class="dot">99+</span>
+                        </div>
+                   </div>
+                </div>
+            </li>
+            <li>
+                <img src="https://ws1.sinaimg.cn/large/0065oQSqly1g04lsmmadlj31221vowz7.jpg" alt="" />
+                <div class="f1">
+                <div class="df">
+                    <div class="f1 tit">群通知</div>
+                    <div class="c3">上午9：00</div>
+                </div>
+                <div class="df">
+                        <div class="f1 c3">hugeannex 申请加入javascript</div>
+                        <div>
+                            <span class="dot">99+</span>
+                        </div>
+                </div>
+                </div>
+            </li>
+            <li>
+            <img src="https://ws1.sinaimg.cn/large/0065oQSqly1g04lsmmadlj31221vowz7.jpg" alt="" />
+            <div class="f1">
+               <div class="df">
+                   <div class="f1 tit">群通知</div>
+                   <div class="c3">上午9：00</div>
+               </div>
+               <div class="df">
+                    <div class="f1 c3">hugeannex 申请加入javascript</div>
+                    <div>
+                        <span class="dot">99+</span>
+                    </div>
+               </div>
+            </div>
+        </li>
+        <li>
+            <img src="https://ws1.sinaimg.cn/large/0065oQSqly1g04lsmmadlj31221vowz7.jpg" alt="" />
+            <div class="f1">
+               <div class="df">
+                   <div class="f1 tit">群通知</div>
+                   <div class="c3">上午9：00</div>
+               </div>
+               <div class="df">
+                    <div class="f1 c3">hugeannex 申请加入javascript</div>
+                    <div>
+                        <span class="dot">99+</span>
+                    </div>
+               </div>
+            </div>
+        </li>
+        <li>
+            <img src="https://ws1.sinaimg.cn/large/0065oQSqly1g04lsmmadlj31221vowz7.jpg" alt="" />
+            <div class="f1">
+               <div class="df">
+                   <div class="f1 tit">群通知</div>
+                   <div class="c3">上午9：00</div>
+               </div>
+               <div class="df">
+                    <div class="f1 c3">hugeannex 申请加入javascript</div>
+                    <div>
+                        <span class="dot">99+</span>
+                    </div>
+               </div>
+            </div>
+        </li>
+        <li>
+            <img src="https://ws1.sinaimg.cn/large/0065oQSqly1g04lsmmadlj31221vowz7.jpg" alt="" />
+            <div class="f1">
+               <div class="df">
+                   <div class="f1 tit">群通知</div>
+                   <div class="c3">上午9：00</div>
+               </div>
+               <div class="df">
+                    <div class="f1 c3">hugeannex 申请加入javascript</div>
+                    <div>
+                        <span class="dot">99+</span>
+                    </div>
+               </div>
+            </div>
+        </li>
+        <li>
+            <img src="https://ws1.sinaimg.cn/large/0065oQSqly1g04lsmmadlj31221vowz7.jpg" alt="" />
+            <div class="f1">
+               <div class="df">
+                   <div class="f1 tit">群通知</div>
+                   <div class="c3">上午9：00</div>
+               </div>
+               <div class="df">
+                    <div class="f1 c3">hugeannex 申请加入javascript</div>
+                    <div>
+                        <span class="dot">99+</span>
+                    </div>
+               </div>
+            </div>
+        </li>
+        <li>
+            <img src="https://ws1.sinaimg.cn/large/0065oQSqly1g04lsmmadlj31221vowz7.jpg" alt="" />
+            <div class="f1">
+               <div class="df">
+                   <div class="f1 tit">群通知</div>
+                   <div class="c3">上午9：00</div>
+               </div>
+               <div class="df">
+                    <div class="f1 c3">hugeannex 申请加入javascript</div>
+                    <div>
+                        <span class="dot">99+</span>
+                    </div>
+               </div>
+            </div>
+        </li>
+        <li>
+            <img src="https://ws1.sinaimg.cn/large/0065oQSqly1g04lsmmadlj31221vowz7.jpg" alt="" />
+            <div class="f1">
+               <div class="df">
+                   <div class="f1 tit">群通知</div>
+                   <div class="c3">上午9：00</div>
+               </div>
+               <div class="df">
+                    <div class="f1 c3">hugeannex 申请加入javascript</div>
+                    <div>
+                        <span class="dot">99+</span>
+                    </div>
+               </div>
+            </div>
+        </li>
+    </ul>
+    <canvas></canvas>
+    <script src="https://raw.githack.com/anderpang/metaball/master/metaball.min.js"></script>
+    <script>
+         var cvs=document.querySelector("canvas"),
+             width,
+             height,
+             ctx,
+             ball1=new Ball(0,0,5),
+             ball2=new Ball(0,0,5),
+             maxDistance=100,
+             dpr=window.devicePixelRatio||1,
+             spring=0.2,
+             friction=0.9,
+             drag={
+                 isMove:false,
+                 target:null,
+                 radius:0,
+                 distance:0,
+                 x:0,
+                 y:0,
+                 offsetX:0,
+                 offsetY:0,
+                 scrollTop:0
+             };
+
+        function resize(){
+            cvs.width=width=innerWidth*dpr;
+            cvs.height=height=innerHeight*dpr;
+            ctx=cvs.getContext("2d");
+
+            maxDistance=Math.min(width,height)*0.2;
+        }
+
+        window.addEventListener("resize",resize,false);
+
+        if(typeof window.onmousedown!=="undefined")
+        {
+            window.addEventListener("mousedown",pointerDownHandle,false);
+
+            window.addEventListener("mousemove",pointerMoveHandle,false);
+
+            window.addEventListener("mouseup",pointerUpHandle,false);
+
+            window.addEventListener("mouseleave",pointerUpHandle,false);
+        }
+        else{
+            window.addEventListener("touchstart",function(e){
+                e.clientX=e.targetTouches[0].clientX;
+                e.clientY=e.targetTouches[0].clientY;
+                pointerDownHandle(e);
+            },{passive: true});
+            window.addEventListener("touchmove",function(e){
+                e.clientX=e.targetTouches[0].clientX;
+                e.clientY=e.targetTouches[0].clientY;
+                pointerMoveHandle(e);
+            },{passive: true});
+            window.addEventListener("touchend",pointerUpHandle,{passive: true});
+            window.addEventListener("touchcancel",pointerUpHandle,{passive: true});
+        }
+
+        function pointerDownHandle(e){
+            var t=e.target;
+            if(t.className==="dot"){
+                drag.scrollTop=scrollY;
+                document.documentElement.classList.add("locked");
+                document.body.scrollTop=drag.scrollTop;
+                drag.isMove=true;
+                drag.target=t;
+                drag.x=e.clientX;
+                drag.y=e.clientY;
+
+                setBalls(t);
+                drag.offsetX=drag.x*dpr-ball2.x;
+                drag.offsetY=drag.y*dpr-ball2.y;
+
+                cvs.style.display="block";
+            }
+        }
+
+        function pointerMoveHandle(e){
+            if(drag.isMove){
+                var t=drag.target,
+                    cx=e.clientX,
+                    cy=e.clientY;
+
+                setTranslate(t,cx-drag.x,cy-drag.y);
+                ball1.x=cx*dpr-drag.offsetX;
+                ball1.y=cy*dpr-drag.offsetY;
+                draw();
+            }
+        }
+
+        function pointerUpHandle(e){
+            if(drag.isMove){
+
+                drag.isMove=false;
+
+                //回弹，或者消失动画
+                if(drag.distance>maxDistance){
+                    //消失动画
+                    ctx.clearRect(0,0,width,height);
+                    drag.target.classList.add("dot_hide");
+                    cvs.style.display="none";
+                    document.documentElement.classList.remove("locked");
+                    window.scrollTo(0,drag.scrollTop);
+
+                }
+                else{
+                    setBounce(drag.target);
+                }
+                drag.target=null;
+
+            }
+        }
+
+        resize();
+
+        function setBalls(el){
+            var bound=el.getBoundingClientRect();
+            ball1.radius=ball2.radius=bound.height*0.5*dpr;
+            ball1.x=ball2.x=(bound.left+bound.width*0.5)*dpr;
+            ball1.y=ball2.y=(bound.top)*dpr+ball2.radius;
+
+            drag.radius=ball2.radius;
+
+        }
+
+        function setTranslate(el,x,y){
+            var ts="translate(";
+            ts+=x;
+            ts+="px,";
+            ts+=y;
+            ts+="px)";
+
+            el._tx=x;
+            el._ty=y;
+            el.style.transform=el.style.webkitTransform=ts;
+        }
+
+        function setBounce(el){
+            var tx=el._tx,
+                ty=el._ty,
+                vx=0,
+                vy=0,
+                timer;
+
+            function run(){
+                timer=requestAnimationFrame(run);
+
+                vx+=tx*spring;
+                vy+=ty*spring;
+                vx*=friction;
+                vy*=friction;
+
+                tx-=vx;
+                ty-=vy;
+                ball1.x-=vx*dpr;
+                ball1.y-=vy*dpr;
+
+                if(Math.abs(tx)<1 && Math.abs(ty)<1){
+                    setTranslate(el,0,0);
+                    cancelAnimationFrame(timer);
+                    cvs.style.display="none";
+                    document.documentElement.classList.remove("locked");
+                    window.scrollTo(0,drag.scrollTop);
+                }
+                else{
+                    setTranslate(el,tx,ty);
+                    draw();
+                }
+
+            }
+            run();
+        }
+
+        function draw(){
+            ctx.clearRect(0,0,width,height);
+
+            //计算球2的半径
+            var distance=Math.hypot(ball2.x-ball1.x,ball2.y-ball1.y);
+
+            drag.distance=distance;
+
+            if(!distance || distance>maxDistance){
+                return;
+            }
+
+            ball2.radius=drag.radius*(1-distance/maxDistance*0.7);
+            ball2.draw(ctx);
+
+            //metaball数据
+            var data=metaball(ball1, ball2,maxDistance);
+            if(data){
+                var cutDots=data.cutDots,
+                    ctrlDots=data.ctrlDots;
+                ctx.beginPath();
+                  ctx.moveTo(cutDots[0].x,cutDots[0].y);
+                  ctx.bezierCurveTo(ctrlDots[0].x,ctrlDots[0].y,ctrlDots[3].x,ctrlDots[3].y,cutDots[3].x,cutDots[3].y);
+                  ctx.lineTo(cutDots[2].x,cutDots[2].y);
+                  ctx.bezierCurveTo(ctrlDots[2].x,ctrlDots[2].y,ctrlDots[1].x,ctrlDots[1].y,cutDots[1].x,cutDots[1].y);
+                ctx.closePath();
+                ctx.fill();
+            }
+        }
+
+        function Ball(x,y,radius){
+            this.x=x;
+            this.y=y;
+            this.radius=radius;
+        }
+
+        Ball.prototype.draw=function(ctx){
+            ctx.beginPath();
+            ctx.fillStyle="red";
+            ctx.arc(this.x,this.y,this.radius,0,Math.PI*2);
+            ctx.fill();
+        };
+
+    </script>
+</body>
+</html>
