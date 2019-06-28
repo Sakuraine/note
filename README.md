@@ -88,7 +88,8 @@
     </code>
   </pre>
 </details>
-![前端知识结构](https://raw.github.com/JacksonTian/fks/master/figures/fks.jpg)
+
+[前端知识结构](https://raw.github.com/JacksonTian/fks/master/figures/fks.jpg)
 
 [可视化效果](http://html5ify.com/fks/fks_chart/)
 
