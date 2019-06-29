@@ -131,13 +131,12 @@ function(){}
 ```
 
 > 语法
-```
-
-```
-        function() {
-            alert('hellow, world');
-        }
-    ```
+```js
+​```js
+	function() {
+		alert('hellow, world');
+	}
+(防止编译)```
 ```
 
 ## 其他
@@ -166,24 +165,41 @@ function(){}
 ```
 [TOC]
 ```
+
 设置之后可以自动根据设置的分级标题来自动生成目录
 
 ### 图片
+
 ![image](https://www.yinxiang.com/blog/wp-content/uploads/2018/07/%E5%94%AE%E7%A5%A8%E5%BE%AE%E4%BF%A1%E5%B0%81%E9%9D%A22.png)@w=300h=150
+
+
+> 语法
+
 ```
 ![图片alt](图片地址 ''图片title'')@w=宽度h=高度
+```
+
+### 数学公式
+
+```math
+e^{i\pi} + 1 = 0
+```
+
+
+
 ### 图表
 
 #### 饼状图&折线图&柱状图&条形图
 
-```mermaid
- ,预算,收入,花费,债务
+```chart 
+,预算,收入,花费,债务
 June,5000,8000,4000,6000
 July,3000,1000,4000,3000
 Aug,5000,7000,6000,3000
 Sep,7000,2000,3000,1000
 Oct,6000,5000,4000,2000
 Nov,4000,3000,5000,
+
 
 type: pie
 title: 每月收益
@@ -192,9 +208,28 @@ y.title: Month
 y.suffix: $
 ```
 
+
+
+```chart
+,预算,收入,花费,债务
+June,5000,8000,4000,6000,
+July,3000,1000,4000,3000,
+Aug,5000,7000,6000,3000,
+Sep,7000,2000,3000,1000,
+Oct,6000,5000,4000,2000,
+Nov,4000,3000,5000,
+
+type: pie
+title: 每月收益
+x.title: Amount
+y.title: Month
+y.prefix: $
+y.suffix: $
+```
+
 > 语法
 ```
-​```chart
+(```)chart
 ,预算,收入,花费,债务
 June,5000,8000,4000,6000
 July,3000,1000,4000,3000
@@ -236,9 +271,27 @@ e>非对称节点]
 f{菱形节点}
 ```
 
+**连线**
+
+```mermaid
+graph TB
+A1-->B1
+A2---B2
+A3--text---B3
+A4--text-->B4
+A5-.-B5
+A6-.->B6
+A7-.text.-B7
+A8-.text.->B8
+A9===B9
+A10==>B10
+A11==text===B11
+A12==text==>B12
+```
+
 > 语法
 ```
-​```mermaid
+(```)mermaid
 graph TB //（top bottom）表示从上到下
 graph TD //（top bottom）表示从上到下
 graph BT //（bottom top）表示从下到上
@@ -259,20 +312,19 @@ e>非对称节点]
 f{菱形节点}
 (```) //括号防止编译
 ```
+
 或者
 
 ```flow
-st => start: 开始
-op => operation: 输入x 和 y
-op3 => operation: 计算z = x + y
-cond => condition: z >= 0
-op2 => operation: x -= 1, y -= 1
-e => end: 输出z
+st=>start: 开始
+e=>end: 结束
+op=>operation: 我的操作
+cond=>condition: 确认？
 
-st -> op -> op3 -> cond
+st->op->cond
 cond(yes)->e
-cond(no)->op2
-op2->op3
+cond(no)->op
+
 ```
 
 #### 时序图
@@ -285,7 +337,7 @@ sequenceDiagram
 
 > 语法
 ```
-​```mermaid
+(```)mermaid
 sequenceDiagram
 A->>B: 是否已收到消息？
 B-->>A: 已收到消息
@@ -306,7 +358,7 @@ section 项目B
 
 > 语法
 ```
-​```mermaid
+(```)mermaid
 gantt
 title 甘特图
 dateFormat  YYYY-MM-DD
@@ -332,3 +384,7 @@ GitHub上设置微标：
 
   `![image](svg链接)`
 
+
+```
+
+```
