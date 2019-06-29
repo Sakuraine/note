@@ -1,8 +1,11 @@
 # "Hello, World!"
+
 ![image](https://img.shields.io/badge/author-ine-green.svg)
 > “种一棵树最好的时间是十年前，其次是现在”————《dead aid》非洲经济学家Dambisa Moyo
 
-### 目录
+
+
+## 目录
 
 <details>
   <summary>展开查看</summary>
@@ -89,9 +92,17 @@
   </pre>
 </details>
 
-[前端知识结构](https://raw.github.com/JacksonTian/fks/master/figures/fks.jpg)
+
+
+> 前端知识结构
+
+![image](https://raw.github.com/JacksonTian/fks/master/figures/fks.jpg)
+
+
 
 [可视化效果](http://html5ify.com/fks/fks_chart/)
+
+
 
 ## 前端开发知识结构
 - 前端工程师
@@ -307,6 +318,8 @@
         - Unix/Linux/OS X/Windows
     - 数据结构
 
+
+
 ## 前端书籍推荐
 ★越少越简单,越适合入门,★多的要么是难度比较高,要么是比较适合在后面看,比如讲性能之类的书.
 
@@ -343,7 +356,10 @@
 - [Pro Git](http://iissnan.com/progit/)★★★
 - [Git权威指南](http://book.douban.com/subject/6526452/)★★★★
 
+
+
 ## 后端书籍推荐
+
 ### Linux管理
 - [Linux 系统管理技术手册](http://book.douban.com/subject/3042029/)
 - [鸟哥的 Linux 私房菜](http://book.douban.com/subject/4889838/)
@@ -380,17 +396,18 @@
 - [The C++ Standard (INCITS/ISO/IEC 14882-2011)](http://webstore.ansi.org/RecordDetail.aspx?sku=INCITS%2fISO%2fIEC+14882-2012)
 - [Overview of the New C++](http://www.artima.com/shop/overview_of_the_new_cpp)
 
+
+
 ## 前端工作面试
+
 - [前端工作面试问题](https://github.com/darcyclarke/Front-end-Developer-Interview-Questions)
 - [前端开发面试题（中文）](https://github.com/markyun/My-blog/tree/master/Front-end-Developer-Questions/Question)
 
-### 结构树状图
 
-<details>
-  <summary>展开查看</summary>
-  <pre>
-    <code>
-    	```mermaid
+
+## 结构树状图
+
+```mermaid
     	graph LR
     	0(Tool)
       1(Program)
@@ -430,13 +447,15 @@
       H --> http
       1 --> DesignPatterns设计模式
       1 --> DataStructure数据结构
-      ```
-    </code>
-  </pre>
-</details>
+```
+
+
+
 `任何事情坚持下去，都会有意想不到的收获`
 
-## 笔记规范
+
+
+## *笔记规范
 
 ### 命名
 
