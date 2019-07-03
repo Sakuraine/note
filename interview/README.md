@@ -60,7 +60,7 @@
 
   ```js
   function createObj(name) {
-  this.name = name;
+  	this.name = name;
   }
   
   var obj = new createObj('a');
@@ -127,7 +127,51 @@ showNmme.bind(obj, 'name1', 'name2')(); // b name1 name2
 
 # 原型链 && 闭包
 
+> 利用原型让一个引用类型继承另一个引用类型的属性和方法
 
+## 原型
+
+### 继承方式
+
+> OO语言支持两种继承方式：接口继承和实现继承
+
+#### 接口继承
+
+只继承方法签名
+
+#### 实现继承
+
+继承实际的方法，**`ECMAScript` 只支持实现继承，而且其实现集成主要是依靠原型链来实现的**
+
+```js
+function SuperType() {
+  this.property = true;
+}
+
+SuperType.prototype.getSuperValue = function() {
+  return this.property;
+};
+
+function SubType() {
+  this.subproperty = false;
+}
+
+// 继承了SuperType
+SubType.prototype = new SuperType();
+
+SubType.prototype.getSubValue = function() {
+  return this.subproperty;
+};
+
+var instance = new Subtype();
+alert(instance.getSuperValue()); // true;
+```
+
+**`prototype` 和 `__proto__` 的区别**
+
+`prototype` 是每个**函数**才有的属性
+
+`__proto__` 是每个**对象**都有的属性
 
 # 同步异步
 
@@ -138,6 +182,10 @@ showNmme.bind(obj, 'name1', 'name2')(); // b name1 name2
 
 
 # `DOM` 事件
+
+
+
+# 中间件
 
 
 
