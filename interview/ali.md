@@ -81,7 +81,7 @@
 
    **立即执行函数表达式** IIFE (Immediately Invoked Function Expression)
 
-   写法：
+   写法： 
 
    ```js
    (function (){})()
@@ -89,10 +89,7 @@
    (function(){}())
    ```
 
-   
-
 2. 块作用域
 
    
 
-   
