@@ -511,6 +511,44 @@ git清除本地缓存命令如下：
   $ git config --global alias.st status // --global 全局所有仓库都适用
   ```
 
+#### 将本地git仓库关联到远端
+
+- 在本地初始化项目
+
+  ```shell
+  git init
+  ```
+
+- 添加到本地仓库
+
+  ```shell
+  git add .
+  ```
+
+- 提交到本地仓库
+
+  ```shell
+  git commit -m ''
+  ```
+
+- 在远端仓库设置好秘钥，新建远端仓库
+
+- 关联本地仓库到远端
+
+  ```
+  git remote add orgin https://github.com/xxx.git
+  ```
+
+- 提交本地到远端
+
+  ```shell
+  git push -u origin master
+  ```
+
+  
+
+
+
 #### 搭建Git服务器
 
 ...
