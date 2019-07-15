@@ -283,7 +283,7 @@ d --> |get newState| a
 3. 多态
    1. 父类或接口定义的引用变量可以指向子类或具体实现类的实例对象。提高了程序的拓展性。
 
-## 五大基本原则
+## 五大基本原则（单开里依接）
 
 1. 单一职责原则
    1. 类的功能要单一
@@ -298,9 +298,72 @@ d --> |get newState| a
 
 
 
+# 前端性能优化
+
+- 雪碧图
+- 减少http重复请求，合理设置 HTTP缓存
+- 资源合并压缩（webpack打包工具）
+- CSS Sprites
+- 将外部脚本置底（将脚本内容在页面信息内容加载后再加载）
+-  异步执行 inline脚本
+- css选择器
+- 试用CDN
 
 
 
+- 减少不必要的 HTTP跳转
+- 减少dom操作，（重绘和回流）
+- 减少作用域链查找和闭包
+
+## 浏览器的缓存机制
+
+- Cookie
+
+  - IE6或更低版本最多20个cookie
+  - IE7和之后的版本最后可以有50个cookie。
+  - Firefox最多50个cookie
+  - chrome和Safari没有做硬性限制
+
+  > 优点
+
+  > 缺点
+
+  - 数量和长度有限制，20条，4kb，超过的会被裁掉
+  - 安全性问题。如果cookie被人拦截了，那人就可以取得所有的session信息。即使加密也与事无补，因为拦截者并不需要知道cookie的意义，他只要原样转发cookie就可以达到目的了。
+  - 自己域名的Cookie 父级域名以及其他域名是不可访问
+
+- 浏览器本地缓存（HTML5）
+
+  -  localStorage 
+    - 没有时间限制的数据存储
+    - 不会过期
+    - 数据可跨越多个窗口，无视当前会话，被共同访问、使用
+  - sessionStorage
+    - 浏览器关闭则丢失
+    - 每个窗口的数据都是独立的
+    - 在同一窗口的同一网站的任何界面都可以访问
+
+  > localStorage和sessionStorage有共同的api
+
+  ```js
+  localStorage.length //获得storage中的个数
+  localStorage .key(n) //获得storage中第n个键值对的键
+  localStorage.key = //value
+  localStorage.setItem(key, value) //添加
+  localStorage.getItem(key) //获取
+  localStorage.removeItem(key) //移除
+  localStorage.clear() //清除
+  ```
+
+  - globalStorage
+    - 浏览器关闭后仍有
+    - 域中任何一个页面存储的信息都能被所有的页面共享
+    - 目前只有FF支持
+    - 只支持当前域下的globalStorage存储
+  - Web Sql Database（目前只谷歌浏览器支持）
+    - openDatabase：这个方法使用现有数据库或创建新数据库创建数据库对象。
+    - ransaction：这个方法允许我们根据情况控制事务提交或回滚。
+    - executeSql：这个方法用于执行真实的SQL查询。
 
 # ***规范***
 
