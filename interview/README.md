@@ -252,7 +252,7 @@ d --> |get newState| a
 
 # `Vdom` 原理及`diff`算法
 
-
+只对比同级
 
 # `HTTPS` 安全性
 
