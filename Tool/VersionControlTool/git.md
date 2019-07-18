@@ -536,6 +536,7 @@ git清除本地缓存命令如下：
 - 关联本地仓库到远端
 
   ```
+  git remote rm origin // 如果提示远端已存在
   git remote add orgin https://github.com/xxx.git
   ```
 
@@ -545,11 +546,32 @@ git清除本地缓存命令如下：
   git push -u origin master
   ```
 
-  
 
 
 
 #### 搭建Git服务器
+
+- 拉取 gh-pages 分支
+
+  ```shell
+  git checkout gh-pages
+  ```
+
+- 打包需要发布的资源
+
+  ```shell
+  git build
+  ```
+
+- 将build文件内的所有资源移动到根目录
+
+- 提交
+
+- 进入github，选择 gh-pages 分支，进入设置
+
+- 找到 GitHub Pages 页面选择分支发布
+
+- 访问域名为`https://<yourgitname>.github.io`，可以自定义域名
 
 ...
 
