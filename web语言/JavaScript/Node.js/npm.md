@@ -194,6 +194,24 @@ $ curl -L https://www.npmjs.org/install.sh | sh
 
 ## 创建node.js模块
 
+### 开发库
+
+#### 创建本地库
+
+- 创建文件夹&&进入文件夹
+
+  ```shell
+  mkdir module-name && cd module-name
+  ```
+
+- 初始化npm包
+
+  ```shell
+  npm init -y
+  ```
+
+  
+
 
 
 ## 发布npm包
