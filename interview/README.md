@@ -300,7 +300,6 @@ d --> |get newState| a
 
 # 前端性能优化
 
-- 雪碧图
 - 减少http重复请求，合理设置 HTTP缓存
 - 资源合并压缩（webpack打包工具）
 - CSS Sprites
