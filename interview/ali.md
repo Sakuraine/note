@@ -1,5 +1,3 @@
-# ali
-
 ## JS核心与浏览器机制
 
 ### 闭包特性
@@ -151,3 +149,31 @@
    2. 使用context
 
       context是一个全局变量
+
+### 高阶组件HOC
+
+> 一种接受组件返回一个增强组件的方法
+
+- 功能
+  1. 代码复用，代码模块化
+  2. 渲染劫持, 操作state
+  3. Props 增删改
+- 实现方式
+  1. 属性代理（Props Proxy）
+  2. 反向继承（Inheritance Inversion）
+
+- 问题
+
+  1. 静态方法丢失
+
+     1. 解决方法：使用[hoist-non-react-statics](https://github.com/mridgway/hoist-non-react-statics)来帮你自动处理，它会自动拷贝所有非React的静态方法；（react-router 里withRouter就使用了这个包）
+  
+  2. Refs属性不能传递
+  
+     1. 解决方法：新组建传递一个ref 回调函数属性给原始组件
+  
+        ```jsx
+        <Enhancer  getRef={ref => this.wrappedC = ref}  />
+        ```
+  
+        
