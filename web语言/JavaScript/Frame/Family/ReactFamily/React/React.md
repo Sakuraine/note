@@ -72,16 +72,57 @@ function MyComponent() {
 
 
 
+### 组件通信
+
+1. 父组件向子组件传递
+
+   父组件通过Props传递到子组件
+
+2. 子组件向父组件传递
+
+   1. 通过回调函数
+
+      子组件调用父组件方法将状态传进去
+
+   2. 利用自定义事件机制
+
+3. 跨级组件通信
+
+   1. 层层传递props
+
+   2. 使用context
+
+      context是一个全局变量
+
+
+
 ### 高阶组件
 
-table功能项渲染
+> 一种接受组件返回一个增强组件的方法
 
-```js
-class BinocularDiy extends React.Component {
-  // 当组件的state需要this.props传进来的数据传进来
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-}
-```
+- 功能
+
+  1. 代码复用，代码模块化
+  2. 渲染劫持, 操作state
+  3. Props 增删改
+
+- 实现方式
+
+  1. 属性代理（Props Proxy）
+  2. 反向继承（Inheritance Inversion）
+
+- 问题
+
+  1. 静态方法丢失
+
+     1. 解决方法：使用[hoist-non-react-statics](https://github.com/mridgway/hoist-non-react-statics)来帮你自动处理，它会自动拷贝所有非React的静态方法；（react-router 里withRouter就使用了这个包）
+
+  2. Refs属性不能传递
+
+     1. 解决方法：新组建传递一个ref 回调函数属性给原始组件
+
+        ```jsx
+        <Enhancer  getRef={ref => this.wrappedC = ref}  />
+        ```
+
+        
