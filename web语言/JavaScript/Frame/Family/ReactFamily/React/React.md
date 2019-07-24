@@ -125,4 +125,23 @@ function MyComponent() {
         <Enhancer  getRef={ref => this.wrappedC = ref}  />
         ```
 
-        
+  3. 不要再 `render()` 里使用高阶函数：
+  
+     ```js
+     render() {
+       // 每一次render函数调用都会创建一个新的EnhancedComponent实例 
+       // EnhancedComponent1 !== EnhancedComponent2
+       const EnhancedComponent = enhance(MyComponent);
+       // 每一次都会使子对象树完全被卸载或移除
+       return <EnhancedComponent />;
+     }
+     ```
+  
+     性能问题、重新加载一个组件会引起原有组件的所有状态和子组件丢失
+  
+     1. 解决方法：
+  
+        在组件定义外使用高阶组件
+
+
+
