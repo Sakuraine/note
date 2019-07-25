@@ -352,52 +352,142 @@ class MyComponent extends Component {
 
 
 
-#### 高阶组件
+#### 高阶组件（higher-order-component）
 
 > 一种接受组件返回一个增强组件的方法
 
-- 功能
+##### 功能
 
-  1. 代码复用，代码模块化
-  2. 渲染劫持, 操作state
-  3. Props 增删改
+1. 代码复用，代码模块化
+2. 渲染劫持, 操作state
+3. Props 增删改
 
-- 实现方式
+##### 实现方式
 
-  1. 属性代理（Props Proxy）
-  2. 反向继承（Inheritance Inversion）
+1. 属性代理（Props Proxy）
+   1. 高阶组件通过被包裹的 React 组件来操作 props。
+2. 反向继承（Inheritance Inversion）
+   1. 高阶组件继承于被包裹的 React 组件
 
-- 问题
+##### 生命周期
 
-  1. 静态方法丢失
+didmount→HOC didmount→(HOCs didmount)→(HOCs will unmount)→HOC will unmount→unmount
 
-     1. 解决方法：使用[hoist-non-react-statics](https://github.com/mridgway/hoist-non-react-statics)来帮你自动处理，它会自动拷贝所有非React的静态方法；（react-router 里withRouter就使用了这个包）
+##### 控制props
 
-  2. Refs属性不能传递
+​	我们可以读取、增加、编辑或是移除从 WrappedComponent 传进来的 props，但需要小心删 
 
-     1. 解决方法：新组建传递一个ref 回调函数属性给原始组件
+​	除与编辑重要的 props。我们应该尽可能对高阶组件的 props 作新的命名以防止混淆。 例如，我们需要增加一个新的 prop: 
 
-        ```jsx
-        <Enhancer  getRef={ref => this.wrappedC = ref}  />
-        ```
+```jsx
+import React, { Component } from 'React'; 
 
-  3. 不要再 `render()` 里使用高阶函数：
-  
-     ```js
-     render() {
-       // 每一次render函数调用都会创建一个新的EnhancedComponent实例 
-       // EnhancedComponent1 !== EnhancedComponent2
-       const EnhancedComponent = enhance(MyComponent);
-       // 每一次都会使子对象树完全被卸载或移除
-       return <EnhancedComponent />;
-     }
-     ```
-  
-     性能问题、重新加载一个组件会引起原有组件的所有状态和子组件丢失
-  
-     1. 解决方法：
-  
-        在组件定义外使用高阶组件
+const MyContainer = (WrappedComponent) => class extends Component { 
+
+render() {
+  const newProps = { 
+    text: newText,
+  }; 
+
+  return <WrappedComponent {...this.props} {...newProps} />; } 
+}
+
+```
+
+ 	当调用高阶组件时，可以用 `text` 这个新的 `props` 了。对于原组件来说，只要套用这个高阶组 件，我们的新组件中就会多一个 `text` 的 `prop`。 
+
+##### 通过 `refs` 使用引用
+
+```jsx
+import React, { Component } from 'react';
+
+const MyContainer = (WrappedComponent) => class extends Component {
+	proc(wrappedComponentInstance) {
+    wrappedComponentInstance.method();
+  }
+
+  render() {
+    const props = Object.assign({}, this.props, {
+      ref: this.proc.bind(this),
+    });
+    return <WrappedComponent {...props} />;
+  }
+}
+```
+
+​	当 WrappedComponent 被渲染时，refs 回调函数就会被执行，这样就会拿到一份WrappedComponent 实例的引用。这就可以方便地用于读取或增加实例的 props，并调用实例的方法。 
+
+##### 抽象 state
+
+​	通过 WrappedComponent 提供的 `props` 和回调函数抽象 `state`，高阶组件可以将原组件抽象为展示型组件，分离内部状态
+
+> Example
+
+​	抽象一个 input 组件：
+
+```jsx
+import React, { Component } from 'React';
+
+const MyContainer = (WrappedComponent) => class extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: '',
+    };
+
+		this.onNameChange = this.onNameChange.bind(this);
+  }
+
+	onNameChange(event) {
+    this.setState({
+			name: event.target.value,
+    })
+	}
+
+	render() {
+    const newProps = {
+      name: {
+        value: this.state.name, onChange: this.onNameChange,
+      },
+    }
+    return <WrappedComponent {...this.props} {...newProps} />;
+  }
+}
+```
+
+
+
+##### 问题
+
+1. 静态方法丢失
+
+   1. 解决方法：使用[hoist-non-react-statics](https://github.com/mridgway/hoist-non-react-statics)来帮你自动处理，它会自动拷贝所有非React的静态方法；（react-router 里withRouter就使用了这个包）
+
+2. Refs属性不能传递
+
+   1. 解决方法：新组建传递一个ref 回调函数属性给原始组件
+
+      ```jsx
+      <Enhancer  getRef={ref => this.wrappedC = ref} />
+      ```
+
+3. 不要再 `render()` 里使用高阶函数：
+
+   ```js
+   render() {
+     // 每一次render函数调用都会创建一个新的EnhancedComponent实例 
+     // EnhancedComponent1 !== EnhancedComponent2
+     const EnhancedComponent = enhance(MyComponent);
+     // 每一次都会使子对象树完全被卸载或移除
+     return <EnhancedComponent />;
+   }
+   ```
+
+   性能问题、重新加载一个组件会引起原有组件的所有状态和子组件丢失
+
+   1. 解决方法：
+
+      在组件定义外使用高阶组件
 
 
 
