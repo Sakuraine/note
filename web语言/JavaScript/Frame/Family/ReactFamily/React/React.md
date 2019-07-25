@@ -465,7 +465,7 @@ const MyContainer = (WrappedComponent) => class extends Component {
 
 2. Refs属性不能传递
 
-   1. 解决方法：新组建传递一个ref 回调函数属性给原始组件
+   1. 解决方法：新组建传递一个 `ref` 回调函数属性给原始组件
 
       ```jsx
       <Enhancer  getRef={ref => this.wrappedC = ref} />
