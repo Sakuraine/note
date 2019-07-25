@@ -30,8 +30,13 @@ React Router 使用路由嵌套的概念来让你定义 view 的嵌套集合，�
 
 ### Histories
 
-- browserHistory
+- browserHistory（官方推荐）
+  - /user
+  - HTML5 的 History API
+  - 浏览器提供相应的接口来修改浏览器的历史记录
 - hashHistory
+  - /#/user?name=zhangsan
+  - 通过改变地址后面的 hash 来改变浏览器的历史记录
 - createMemoryHistory
 
 ## 高级用法
