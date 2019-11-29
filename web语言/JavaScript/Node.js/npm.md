@@ -109,8 +109,11 @@ $ npm help <command>
 # 查看全局安装的模块 // depth 显示依赖层级，不设置则默认全部展开
 $ npm list -g --depth=0
 
-# 查看
-$ npm list grunt
+# 查看本地包版本
+$ npm view <moduleName> version
+
+# 查看包远端信息
+$ npm info <moduleName>
 ```
 
 
