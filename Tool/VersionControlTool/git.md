@@ -443,7 +443,7 @@ $ git status
 
 #### 版本回滚
 
-> 回滚到最近一次的提交前
+> 撤销上一次 commit 至本地
 
   ```shell
 $ git reset --hard HEAD^

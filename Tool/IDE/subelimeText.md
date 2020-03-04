@@ -42,6 +42,24 @@
 
   > JSX 代码审查，实时提示语法错误, 帮助快速定位错误点.(依赖于 `sublimeLinter`)
 
+## 使用
+
+- Mac下 Terminal 用 Sublime 打开文件
+
+  使用alias绑定打开命令
+
+  ```shell
+  $ alias sublime='open -a /Applications/Sublime\ Text.app'
+  ```
+
+  打开文件
+
+  ```shell
+  $ sublime test.txt
+  ```
+
+
+
 ## 快捷键
 
 | 快捷键              | description                                     |
