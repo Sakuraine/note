@@ -446,7 +446,7 @@ $ git status
 > 撤销上一次 commit 至本地
 
   ```shell
-$ git reset --hard HEAD^
+$ git reset --soft HEAD^
   ```
 
 > 取消回滚/回滚到指定版本
